@@ -1,2 +1,101 @@
+:root {
+  --grey: #3F3F3F;
+  --orange: #FF914D;
+  --yellow: #FFDE59;
+
+  /* use colors like this 
+    color: var(--grey);
+  */
+}
+
+body {
+  background-image: url(./images/Theme-background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+}
 
 
+/* Homepage CSS 🡻 */
+
+/* code for homepage here (delete this line)*/
+
+/* End of Homepage CSS 🡹  */
+
+
+
+/* Navigation bar CSS 🡻 */
+
+/* code for custom burger here  (delete this line)*/
+
+/* Navigation bar CSS 🡹  */
+
+
+
+
+
+/* Custom burger CSS 🡻 */
+
+/* code for custom burger here  (delete this line)*/
+
+/* End of custom burger CSS 🡹  */
+
+
+
+
+/* About us CSS 🡻 */
+
+/* code for about us here  (delete this line)*/
+
+/* End of about us CSS 🡹  */
+
+
+
+
+/* Contact CSS 🡻 */
+
+/* code for contact here  (delete this line)*/
+
+/* End of contact CSS 🡹  */
+
+
+
+
+
+/* History  CSS 🡻 */
+
+/* code for history here  (delete this line)*/
+
+/* End of history CSS 🡹  */
+
+
+
+
+
+/* Cart CSS 🡻 */
+
+/* code for cart here  (delete this line)*/
+
+/* End of cart  CSS 🡹  */
+
+
+
+
+
+
+/* Rewiew  CSS 🡻 */
+
+/* code for custom burger here  (delete this line)*/
+
+/* End of custom burger CSS 🡹  */
+
+
+
+
+
+/* Menu CSS 🡻 */
+
+/* code for menu here  (delete this line)*/
+
+/* End of menu CSS 🡹  */
