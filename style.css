@@ -19,7 +19,9 @@ body {
 
 /* Homepage CSS 🡻 */
 
-/* code for homepage here (delete this line)*/
+body {
+  background-image: url(./images/Theme-background.jpg);
+}
 
 /* End of Homepage CSS 🡹  */
 
