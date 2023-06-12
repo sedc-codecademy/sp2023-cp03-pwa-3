@@ -23,6 +23,69 @@ body {
   background-image: url(./images/Theme-background.jpg);
 }
 
+nav {
+  background-color: #FFDE59;
+  color: #fff;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu li {
+  margin-left: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background-color: #333;
+    padding: 10px;
+  }
+
+  .menu.active li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
 /* End of Homepage CSS 🡹  */
 
 
