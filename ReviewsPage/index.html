@@ -4,211 +4,43 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
   <title>Leave a comment</title>
+
 </head>
 <style>
 body {
   background-image: url(../images/Theme-background.jpg);
-}
-#mainDiv {
-  display: flex;
-  justify-content: center; 
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: 1rem;
-  
-
-
-}
-
-.review-section {
-  margin-bottom: 20px;
-  background-color: #1a1a1a;
-  color: #FFDE59;
-  padding: 1rem;
-  border: 1px solid #FF914D;
-  border-radius: 1rem;
-
-}
-
-.review-form {
-  border: 1px solid #FFDE59;
-  padding: 10px;
-  background-color: #1a1a1a ;
-  border: 0.5px solid #FFDE59;
-  
-  text-align: center;
-
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  
-}
-
-.user-photo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #3F3F3F;;
-  margin-right: 10px;
-}
-
-.user-details input {
-  margin-bottom: 5px;
-  background-color: #3F3F3F;
-  height: 1.5rem;
-  border: 0.1px solid #FFDE59;
-  border-radius: 3px;
-  color: #FFDE59;
-}
-
-.review-content textarea {
-  width: 100%;
-  height: 100px;
-  resize: vertical;
-  margin-bottom: 2rem;
-  background-color: #3F3F3F;
-  color: #FFDE59;
-}
-
-.rating {
-  margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-.rating label {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url(star.png);
-  background-size: cover;
-  cursor: pointer;
-}
-
-#submit-review {
-  background-color: #FF914D;
-  color: #eee;
-  border: none;
-  padding: 10px 20px;
-  margin-left: 10rem;
-  cursor: pointer;
-}
-#submit-review:hover {
-  transition: 0.3s;
-  background: linear-gradient(90deg, #FF914D,#1a1a1a,#1a1a1a,#1a1a1a,#1a1a1a,#1a1a1a,#FF914D);
-  border-radius: 0.3em;
-  color:#FFDE59;
-  
-  
-}
-
-
-
-.reviews-list {
-  /* Add styling for displaying reviews */
-}
-
-*{
-    margin: 0;
-    padding: 0;
-}
-.rate {
-    float: left;
-    height: 46px;
-    padding: 0 10px;
-}
-.rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-}
-.rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
-}
-.rate:not(:checked) > label:before {
-    content: '★ ';
-}
-.rate > input:checked ~ label {
-    color: #FFDE59  ;    
-}
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-    color: gold;  
-}
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
-    color: #FFDE59  ;
-}
-
-@media only screen and (max-width: 600px) {
-  .review-section {
-    padding: 10px;
   }
-
-  .user-info {
-    flex-direction: column;
-  }
-
-  .user-photo {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .user-details input,
-  .review-content textarea {
-    width: 100%;
-  }
-
-  .rating label {
-    width: 16px;
-    height: 16px;
-  }
-
-  #submit-review {
-    width: 100%;
-    position:relative;
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-}
-
-
 </style>
 <body>
+<div class="login-section">
+  <h2>Login</h2>
+  <div class="login-form">
+    <input type="text" id="username" placeholder="Your Name">
+    <button id="login-button">Log In</button>
+    <button id="logout-button" style="display: none;">Log Out</button>
+
+  </div>
+</div>
 
   <div id="mainDiv">
+    
     <div class="review-section">
-      
+      <h2>Leave a Review</h2>
       <div class="review-form">
-        <h2 id="revTitle">SEDC BURGERS</h2>
         <div class="user-info">
           <div class="user-photo">
             <!-- Place for user photo -->
-            
           </div>
           <div class="user-details">
-            <input type="text" id="username" placeholder="Your Name">
+            <p id="logged-in-username">Ovde UserName</p>
             <input type="text" id="title" placeholder="Review Title">
           </div>
         </div>
         <div class="review-content">
           <textarea id="review" placeholder="Write your review"></textarea>
+        </div>
         </div>
         <div class="rate">
       <input type="radio" id="star5" name="rate" value="5" />
@@ -224,12 +56,188 @@ body {
     </div>
         <button id="submit-review">Submit</button>
       </div>
+      <div class="mainReviewDiv">
+        <h2 class="allReviewsHeader">All Reviews: </h2>
+        <div class="reviews-container">
+          <div class="reviews-list">
+            <!-- Review items will be dynamically added here -->
+          </div>
+        </div>
+      </div>
     </div>
     
-    <div class="reviews-list">
-      <!-- Place for displaying reviews -->
-    </div>
+   
     
   </div>
+
+
+  <script>
+// Check if the user is already logged in
+function checkLoginStatus() {
+  var loggedInUsername = localStorage.getItem('loggedInUsername');
+  if (loggedInUsername) {
+    document.getElementById('username').value = loggedInUsername;
+    document.getElementById('username').readOnly = true;
+    document.getElementById('login-button').style.display = 'none';
+    document.getElementById('logout-button').style.display = 'block';
+    document.getElementById('logged-in-username').textContent = 'Logged in as: ' + loggedInUsername;
+  }
+}
+
+// Handle the login button click
+document.getElementById('login-button').addEventListener('click', function() {
+  var username = document.getElementById('username').value;
+  if (username.trim() !== '') {
+    localStorage.setItem('loggedInUsername', username);
+    document.getElementById('username').readOnly = true;
+    document.getElementById('login-button').style.display = 'none';
+    document.getElementById('logout-button').style.display = 'block';
+    document.getElementById('logged-in-username').textContent = 'Logged in as: ' + username;
+  }
+});
+
+// Handle the logout button click
+document.getElementById('logout-button').addEventListener('click', function() {
+  localStorage.removeItem('loggedInUsername');
+  document.getElementById('username').value = '';
+  document.getElementById('username').readOnly = false;
+  document.getElementById('login-button').style.display = 'block';
+  document.getElementById('logout-button').style.display = 'none';
+  document.getElementById('logged-in-username').textContent = '';
+});
+
+// Check the login status when the page loads
+checkLoginStatus();
+
+
+//ovde za submit i ostalo sranje da se vagjat dinamicno so si sveeee 
+// Handle the submit review button click
+document.getElementById('submit-review').addEventListener('click', function() {
+  var title = document.getElementById('title').value;
+  var review = document.getElementById('review').value;
+  var loggedInUsername = localStorage.getItem('loggedInUsername');
+
+  if (title.trim() !== '' && review.trim() !== '' && loggedInUsername) {
+    var reviewItem = document.createElement('div');
+    reviewItem.classList.add('review');
+
+    var reviewHeader = document.createElement('div');
+    reviewHeader.classList.add('review-header');
+
+    var reviewTitle = document.createElement('h3');
+    reviewTitle.textContent = title;
+
+    var usernameElement = document.createElement('span');
+    usernameElement.classList.add('username');
+    usernameElement.textContent = loggedInUsername;
+
+    var reviewBody = document.createElement('div');
+    reviewBody.classList.add('review-body');
+
+    var reviewText = document.createElement('p');
+    reviewText.classList.add('review-text');
+    reviewText.textContent = review;
+
+    var likeButton = document.createElement('button');
+    likeButton.classList.add('like-button');
+    likeButton.textContent = 'Like';
+    likeButton.addEventListener('click', function() {
+      // Handle the like functionality here
+      likeButton.textContent = 'Liked';
+    });
+
+    var deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete-button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', function() {
+      var confirmDelete = confirm('Are you sure you want to delete this review?');
+      if (confirmDelete) {
+        reviewItem.classList.add('hide');
+        setTimeout(function() {
+          reviewItem.remove();
+        }, 400); // Delay removal to match the slide-up animation duration
+      }
+    });
+
+    reviewHeader.appendChild(reviewTitle);
+    reviewHeader.appendChild(usernameElement);
+    reviewBody.appendChild(reviewText);
+    reviewBody.appendChild(likeButton);
+    reviewBody.appendChild(deleteButton);
+    reviewItem.appendChild(reviewHeader);
+    reviewItem.appendChild(reviewBody);
+
+    var reviewsList = document.querySelector('.reviews-list');
+    reviewsList.appendChild(reviewItem);
+
+    var reviewItems = document.querySelectorAll('.review');
+    if (reviewItems.length > 4) {
+      reviewsList.classList.add('scrollable');
+    }
+
+    // Scroll to the latest review item
+    reviewsList.scrollTop = reviewsList.scrollHeight;
+
+    // Clear the form fields
+    document.getElementById('title').value = '';
+    document.getElementById('review').value = '';
+
+    // Show the review item with animation
+    setTimeout(function() {
+      reviewItem.classList.add('show');
+    }, 10);
+  }
+});
+
+
+//ovde submit button like edit i sve 
+// Handle the like functionality
+var likeButtons = document.querySelectorAll('.like-button');
+likeButtons.forEach(function(likeButton) {
+  likeButton.addEventListener('click', function() {
+    if (likeButton.textContent === 'Like') {
+      likeButton.textContent = 'Liked';
+      // Perform any additional like-related functionality
+    } else {
+      likeButton.textContent = 'Like';
+      // Perform any additional unlike-related functionality
+    }
+  });
+});
+
+// Handle the edit functionality
+var editButtons = document.querySelectorAll('.edit-button');
+editButtons.forEach(function(editButton) {
+  editButton.addEventListener('click', function() {
+    var reviewItem = editButton.closest('.review');
+    var reviewTitle = reviewItem.querySelector('.review-title');
+    var reviewText = reviewItem.querySelector('.review-text');
+
+    var newTitle = prompt('Enter a new title for the review:', reviewTitle.textContent);
+    if (newTitle) {
+      reviewTitle.textContent = newTitle;
+      // Perform any additional edit-related functionality
+    }
+  });
+});
+
+// Handle the delete functionality
+var deleteButtons = document.querySelectorAll('.delete-button');
+deleteButtons.forEach(function(deleteButton) {
+  deleteButton.addEventListener('click', function() {
+    var reviewItem = deleteButton.closest('.review');
+    var confirmDelete = confirm('Are you sure you want to delete this review?');
+    if (confirmDelete) {
+      reviewItem.remove();
+      // Perform any additional delete-related functionality
+    }
+  });
+});
+
+
+
+
+
+  </script>
 </body>
 </html>
