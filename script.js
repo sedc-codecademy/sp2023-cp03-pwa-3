@@ -9,7 +9,14 @@
 
 /* Navigation bar SCRIPT 🡻 */
 
-/* code for custom burger here  (delete this line)*/
+const menuIcon = document.querySelector('.Menue')
+const navbar=document.querySelector('.navbar')
+
+menuIcon.addEventListener('click',()=>{
+navbar.classList.toggle('change');
+})
+const inputs = document.querySelectorAll(".input");
+
 
 /* Navigation bar SCRIPT 🡹  */
 
