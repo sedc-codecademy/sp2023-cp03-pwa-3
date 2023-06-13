@@ -30,18 +30,18 @@ body {
 .navbar{
   width: 300px;
   height: 100%;
-  background-color: #232323;  
+  background-color: #3F3F3F;  
   position: fixed;
   top: 0;
-  right: -300px;
+  left: -300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20% 0 0 60%;
-  transition: right 0.8s cubic-bezier(1,0,0,1);
+  border-radius: 0 20%  60% 0;
+  transition: left 0.8s cubic-bezier(1,0,0,1);
 }
 .change{
-  right: 0;
+  left: 0;
 }
 
 .Menue{
@@ -49,7 +49,7 @@ body {
   height: 30px;
   position: fixed;
   top: 50px;
-  right: 50px;
+  left: 50px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
