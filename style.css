@@ -23,6 +23,7 @@ body {
   background-image: url(./images/Theme-background.jpg);
 }
 
+
 /* End of Homepage CSS 🡹  */
 
 
@@ -66,9 +67,92 @@ body {
 
 
 /* History  CSS 🡻 */
+.customer-history {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+  margin: auto;
+  border: 0.1rem solid;
 
-/* code for history here  (delete this line)*/
+  border-color:#FF914D;
+}
 
+.customer-post {
+  display: flex;
+  background-color: var(--grey);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.customer-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.customer-details img {
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.customer-review {
+  flex-grow: 1;
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.star-rating .star {
+  font-size: 25px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star-rating .star:hover,
+.star-rating .star:hover ~ .star {
+  color: #ffd700;
+}
+
+.rating-label {
+  font-size: 20px;
+
+}
+
+.rating-input {
+  display: none;
+}
+
+h3, h4, p {
+  margin: 0;
+}
+
+.mainDiv {
+  background-color: black;
+  color: rgb(196, 196, 196);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-5%, -40%);
+  border: 0.1rem solid;
+  border-radius: 0.5rem;
+  border-color:#FF914D;
+  align-items: center;
+  justify-items: center;
+
+}
+.H1 {
+  color: var(--yellow);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* End of history CSS 🡹  */
 
 
