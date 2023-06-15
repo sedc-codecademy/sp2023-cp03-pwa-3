@@ -21,7 +21,72 @@ body {
 
 /* Homepage CSS 🡻 */
 
-/* code for homepage here (delete this line)*/
+body {
+  background-image: url(./images/Theme-background.jpg);
+}
+
+nav {
+  background-color: #FFDE59;
+  color: #fff;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu li {
+  margin-left: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background-color: #333;
+    padding: 10px;
+  }
+
+  .menu.active li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
 
 /* End of Homepage CSS 🡹  */
 
@@ -29,7 +94,90 @@ body {
 
 /* Navigation bar CSS 🡻 */
 
-/* code for custom burger here  (delete this line)*/
+.navbar{
+  width: 300px;
+  height: 100%;
+  background-color: #3F3F3F;  
+  position: fixed;
+  top: 0;
+  left: -300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 20%  60% 0;
+  transition: left 0.8s cubic-bezier(1,0,0,1);
+}
+.change{
+  left: 0;
+}
+
+.Menue{
+  width: 35px;
+  height: 30px;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.line{
+  width: 100%;
+  height: 3px;
+  background-color: chocolate;
+  transition: all 0.8s;
+}
+.change .line-1{
+  transform:  rotateZ(-405deg) translate(-8px,6px);
+}
+.change .line-2{
+  opacity: 0;
+}
+.change .line-3{
+  transform:  rotateZ(405deg) translate(-8px,-6px);
+}
+
+.nav-list{
+  text-align: right;
+}
+.nav-item{
+  list-style: none;
+  margin: 25px;
+}
+.nav-links{
+  text-decoration: none;
+  font-size: 22px;
+  color: #eee;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 3px 0;
+}
+.nav-links::before,
+.nav-links::after{
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: chocolate;
+  position: absolute;
+  left: 0;  
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.nav-links::after{
+  bottom: 0;
+  transform-origin: right;
+}
+.nav-links::before{
+  top: 0;
+  transform-origin: left;
+}
+.nav-links:hover::before,
+.nav-links:hover::after{
+  transform: scaleX(1);
+}
 
 /* Navigation bar CSS 🡹  */
 
@@ -205,7 +353,351 @@ body {
 
 /* Rewiew  CSS 🡻 */
 
-/* code for custom burger here  (delete this line)*/
+#mainDiv {
+  display: flex;
+  justify-content: space-between; 
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+
+}
+
+.mainReviewDiv {
+  
+  margin-bottom: 20px;
+  background-color: #1a1a1a;
+
+  padding: 1rem;
+  border: 1px solid #FF914D;
+  border-radius: 1rem;
+  width: 80%;
+}
+
+.allReviewsHeader {
+  color: var(--yellow)
+}
+
+.review-section {
+  margin-bottom: 20px;
+  background-color: #1a1a1a;
+  color: #FFDE59;
+  padding: 1rem;
+  border: 1px solid #FF914D;
+  border-radius: 1rem;
+  width: 30%;
+
+}
+
+.review-form {
+  border: 1px solid #FFDE59;
+  padding: 10px;
+  background-color: #1a1a1a ;
+  border: 0.5px solid #FFDE59;
+  
+  text-align: center;
+
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  
+}
+
+.user-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #3F3F3F;;
+  margin-right: 10px;
+}
+
+.user-details input {
+  margin-bottom: 5px;
+  background-color: #3F3F3F;
+  height: 1.5rem;
+  border: 0.1px solid #FFDE59;
+  border-radius: 3px;
+  color: #FFDE59;
+}
+
+.review-content textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+  margin-bottom: 2rem;
+  background-color: #3F3F3F;
+  color: #FFDE59;
+}
+
+.rating {
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.rating label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(star.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+#submit-review {
+  background-color: #FF914D;
+  color: #eee;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#submit-review:hover {
+  background: linear-gradient(90deg, #FF914D,#1a1a1a,#1a1a1a,#1a1a1a,#1a1a1a,#1a1a1a,#FF914D);
+  border-radius: 0.3em;
+  color:#FFDE59;
+  
+  
+}
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #FFDE59  ;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: gold;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #FFDE59  ;
+}
+
+
+
+@media only screen and (max-width: 867px) {
+#mainDiv {
+  justify-content: space-around;
+  display: grid;
+}
+  .review-section {
+    padding: 10px;
+    width: 90%;
+
+  }
+
+  .mainReviewDiv {
+    padding: 10px;
+    width: 90%;
+  }
+  .user-info {
+    flex-direction: column;
+  }
+
+  .user-photo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .user-details input,
+  .review-content textarea {
+    width: 100%;
+  }
+
+  .rating label {
+    width: 16px;
+    height: 16px;
+  }
+
+  #submit-review {
+    width: 100%;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}
+
+
+.reviews-list {
+  margin-top: 20px;
+  margin-left: 20px;
+  
+
+}
+
+.review {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #1a1a1a;
+  border: 1px, solid , #FFDE59;
+  
+}
+
+.review .review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  
+}
+
+.review .review-header h3 {
+  margin: 0;
+  color: var(--yellow);
+  
+}
+
+.review .review-header .username {
+  margin-left: 10px;
+  color: var(--orange);
+  
+}
+
+.review .review-body {
+  margin-bottom: 5px;
+  background-color: var(--grey);
+}
+
+.review .review-body .user-photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.review .review-body .rating {
+  margin: 0;
+}
+
+.review .review-body .review-text {
+  margin: 0;
+  color: #eee;
+}
+
+.reviews-container {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.review {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: none; /* Initially hide review items */
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.review:first-child {
+  animation-delay: 0.1s; /* Add delay to the first review item for a staggered animation effect */
+}
+
+.review.show {
+  display: block; /* Show review items after animation */
+}
+
+.review.hide {
+  animation: slideUp 0.4s ease forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-title {
+  margin: 0;
+}
+
+.username {
+  font-size: 14px;
+  color: #666;
+}
+
+.review-body {
+  margin-top: 10px;
+}
+
+.review-text {
+  margin: 0;
+}
+
+.like-button {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #f2f2f2;
+  border: none;
+  cursor: pointer;
+}
+
+.like-button:hover {
+  background-color: #e0e0e0;
+}
 
 /* End of rewiew burger CSS 🡹  */
 
@@ -218,3 +710,93 @@ body {
 /* code for menu here  (delete this line)*/
 
 /* End of menu CSS 🡹  */
+
+
+
+
+
+/* Footer CSS 🡻 */
+footer{
+  background-color:#3F3F3F ;
+}
+.footerContainer{
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+.socialMediaIcons{
+  display: flex;
+  justify-content: center;
+}
+.socialMediaIcons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: #ccc;
+  margin: 10px;
+  border-radius: 50%;
+}
+.socialMediaIcons a i{
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+/*Hover effect on social media icons*/
+.socialMediaIcons a:hover{
+  background-color: #FFDE59;
+  transition: 0.5s;
+}
+.socialMediaIcons a:hover i{
+  color:#FF914D ;
+  transition: 0.5s;
+}
+
+/*Footer navigation bar */
+.footerNav{
+  margin: 30px 0;
+}
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.footerNav ul li a{
+  color:white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.footerNav ul li a:hover{
+  opacity: 1;
+}
+
+/*Footer bottom text */
+
+.footerBottom{
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+}
+.footerBottom p{
+  color: white;
+}
+.designer{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+/*Making footer responsive for mobile devices*/
+@media (max-width:700px){
+  .footerNav ul{
+    flex-direction: column;
+  }
+  .footerNav ul li{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
+}
+/* End of footer CSS 🡹  */
