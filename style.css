@@ -686,18 +686,39 @@ nav {
   margin: 0;
 }
 
-.like-button {
+.like-button , .delete-button {
   display: inline-block;
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #f2f2f2;
+ 
+  margin-top: 1rem; 
+  
+  background-color: var(--orange);
   border: none;
   cursor: pointer;
+  width: 3rem;
+  height: 1.4rem;
+  color: var(--grey);
+  /* border-radius: 0.5rem; */
+  text-align: center;
+  
 }
-
+.delete-button:hover {
+  background-color:#ff2727;
+  color: #eee;
+}
 .like-button:hover {
-  background-color: #e0e0e0;
+  background-color: cornflowerblue;  
+  color: #eee;
 }
+/* .delete-button {
+  background-color: #ff2727; 
+  width: 5rem;
+  height: 2rem;
+  color: #eee;
+  border-radius: 0.5rem;
+  margin-top: 1rem; 
+
+} */
+
 
 /* End of rewiew burger CSS 🡹  */
 
