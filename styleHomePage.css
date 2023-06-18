@@ -1,0 +1,9 @@
+body {
+    background-image: url(./images/Theme-background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* margin: 0;
+    padding: 0;
+    min-height: 100vh; */
+  }
