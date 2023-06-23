@@ -252,3 +252,64 @@ textarea.input{
     width: 50%;
     opacity: 1;
 }
+/*---------------------------------------------------*/
+
+.contact-info{
+    padding: 2.3rem 2.2rem;
+    position:  relative;
+}
+#title{
+    color:#FF914D;
+}
+.text{
+    color: #FF914D;
+    margin: 1.5rem 0 2rem 0;
+}
+.information{
+    display: flex;
+    color: #FF914D;
+    margin: 0.7rem 0;
+    align-items: center;
+    font-size: 0.95rem;
+}
+.icon{
+    width: 28px;
+    margin-right: 0.7rem;
+}
+.social-media{
+    padding: 2rem 0 0 0;
+}
+.social-media p{
+    color: #FF914D;
+}
+.social-icons{
+    display: flex;
+    margin-top: 0.5rem;
+}
+.social-icons a{
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    background: #FF914D;
+    color: #3F3F3F;
+    text-align: center;
+    line-height: 45px;
+    margin-right: 0.5rem;
+    transition: .3s;
+}
+.social-icons a:hover{
+    transform: scale(1.05);
+}
+
+.blur{
+    width: 480px;
+    height: 480px;
+    background: rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    color: #EEE;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
