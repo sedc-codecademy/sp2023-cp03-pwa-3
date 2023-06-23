@@ -853,8 +853,13 @@ nav {
 
 
 /* Footer CSS 🡻 */
+body{
+  min-height: 100vh;
+}
 footer{
   background-color:#3F3F3F ;
+  position: sticky;
+  top: 100%;
 }
 .footerContainer{
   width: 100%;
