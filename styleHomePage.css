@@ -45,7 +45,7 @@ body {
  .navigation-manual{
   position: absolute;
   width: 800px;
-  margin-top: -40px;
+  margin-top: 460px;
   display: flex;
   justify-content: center;
  }
