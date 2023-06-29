@@ -868,18 +868,39 @@ width: 100%;
   margin: 0;
 }
 
-.like-button {
+.like-button , .delete-button {
   display: inline-block;
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #f2f2f2;
+ 
+  margin-top: 1rem; 
+  
+  background-color: var(--orange);
   border: none;
   cursor: pointer;
+  width: 3rem;
+  height: 1.4rem;
+  color: var(--grey);
+  /* border-radius: 0.5rem; */
+  text-align: center;
+  
 }
-
+.delete-button:hover {
+  background-color:#ff2727;
+  color: #eee;
+}
 .like-button:hover {
-  background-color: #e0e0e0;
+  background-color: cornflowerblue;  
+  color: #eee;
 }
+/* .delete-button {
+  background-color: #ff2727; 
+  width: 5rem;
+  height: 2rem;
+  color: #eee;
+  border-radius: 0.5rem;
+  margin-top: 1rem; 
+
+} */
+
 
 /* End of rewiew burger CSS 🡹  */
 
@@ -889,7 +910,128 @@ width: 100%;
 
 /* Menu CSS 🡻 */
 
-/* code for menu here  (delete this line)*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.single-menu span{
+  font-family:'Poppins', sans-serif ;
+  font-size: 14px;
+  color: #3F3F3F;
+}
+
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.menus-area{
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+  padding: 100px 0;
+  color: #fff;
+
+}
+
+.menus-area::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  z-index: -1;
+  opacity: .95;
+  left: 0;
+  top: 0;
+}
+.section-title{
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-title h5{
+  font-size: 34px;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+.menus{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.menu-items{
+  flex-basis: 32%;
+}
+.title{
+  background-color: #FF914D;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 24px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.single-menu{
+  background-color: #333;
+  border: 1px solid;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  transition: .3s;
+  margin-bottom: 30px;
+}
+.single-menu span{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #FFDE59;
+  padding: 8px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 15px 0 0 0;
+}
+.single-menu img{
+  max-width: 200px;
+  border: 1px solid;
+  padding: 3px;
+  transition: .3s;
+}
+.single-menu h4{
+  border-bottom: 1px dashed;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+  font-size: 24px;
+}
+.single-menu a{
+  display: inline-block;
+  color: #FFDE59;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+.single-menu:hover img{
+  border-radius: 50%;
+}
+.single-menu:hover{
+  border-color: #FFDE59;
+  border-radius: 7px;
+}
+
+@media only screen and (max-width: 767px){
+  .container{
+    width: 350px;
+  }
+  .section-title h5{
+    font-size: 34px;
+    line-height: 50px;
+  }
+  .menu-items{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+}
 
 /* End of menu CSS 🡹  */
 
@@ -898,16 +1040,24 @@ width: 100%;
 
 
 /* Footer CSS 🡻 */
+
+body{
+  min-height: 100vh;
+}
 footer{
   background-color:#3F3F3F ;
+  position: sticky;
+  top: 100%;
+  clear: both;
 }
 .footerContainer{
   width: 100%;
-  padding: 70px 30px 20px;
+  padding: 70px;
 }
 .socialMediaIcons{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .socialMediaIcons a{
   text-decoration: none;
@@ -970,6 +1120,15 @@ footer{
   margin: 0px 5px;
 }
 
+h3{
+  text-align: right;
+  font-size: 10px;
+}
+
+.storeIcons{
+  float: right;
+}
+
 /*Making footer responsive for mobile devices*/
 @media (max-width:700px){
   .footerNav ul{
@@ -978,6 +1137,11 @@ footer{
   .footerNav ul li{
     width: 100%;
     text-align: center;
+    margin: 10px;
+  }
+  .storeIcons{
+    flex-direction: column;
+    text-align: right;
     margin: 10px;
   }
 }
