@@ -21,9 +21,6 @@ body {
 
 /* Homepage CSS 🡻 */
 
-body {
-  background-image: url(./images/Theme-background.jpg);
-}
 
 nav {
   background-color: #FFDE59;
@@ -187,124 +184,309 @@ nav {
 
 /* Custom burger CSS 🡻 */
 
-/*  */
-.custom-burger-title {
+.customBurgerTitle {
   text-align: center;
   color: var(--yellow);
-  text-shadow: 1px 5px 3px var(--yellow);
-  animation: slideIn 1.5s ease-in-out infinite alternate;
 }
 
-/* @keyframes slideIn {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-10px);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-} */
-
-.burger-container {
-  margin-top: 10rem;
+.CustomHeader {
   display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.main-container {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+
+/* Placeholder for making burger */
+.burgerMaker{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 50%;
+}
+
+
+.ingredientsContainer {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 50%;
+}
+
+
+.ingredientsTabs {
+  width: 80%;
+  height: 100%;
+}
+
+
+/* input */
+/* CSS Variables */
+:root {
+
+  --width: 30rem;
+}
+
+/* Centered Container */
+.burgerNameInput {
+  width: var(--width);
+  height: calc(var(--width) / 5);
+}
+
+
+/* Group Container */
+.group {
+  width: 100%;
+  height: calc(var(--width) / 5);
+  overflow: hidden;
   position: relative;
 }
 
-.ingredients {
+/* Label Styles */
+label {
+  position: absolute;
+  top: calc(var(--width) / 15);
+  color: rgba(255, 255, 255, 0.5);
+  font: 400 calc(var(--width) / 15) Roboto;
+  cursor: text;
+  transition: 0.25s ease;
+}
+
+/* Input Styles */
+.group input {
+  display: block;
+  width: 100%;
+  padding-top: calc(var(--width) / 15);
+  border: none;
+  border-radius: 0;
+  color: white;
+  background: var(--main-color);
+  font-size: calc(var(--width) / 15);
+  transition: 0.3s ease;
+}
+
+.group input:valid ~ label {
+  top: 0;
+  font: 700 calc(var(--width) / 25) Roboto;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.group input:focus {
+  outline: none;
+}
+
+
+.group input:focus ~ label {
+  top: 0;
+  font: 700 calc(var(--width) / 25) Roboto;
+  color: var(--orange);
+}
+
+/* Bar Styles */
+.bar {
+  background: rgba(255, 255, 255, 0.5);
+  content: '';
+  width: var(--width);
+  height: calc(var(--width) / 150);
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.bar:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: var(--orange);
+  transform: translateX(-100%);
+}
+
+/* Text Selection Styles */
+::selection {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Adjustments for input */
+@media screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  .burgerNameInput {
+    width: 100%;
+  }
+}
+
+.group input {
+    font-size: calc(var(--width) / 20);
+  }
+
+  /* all images in burger */
+.burger img {
+  width: 100%;
+}
+
+
+/*  
+ div {
+
+ border: red solid 2px; 
+}  */
+
+.w3-container {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 2rem;
+
+}
+
+
+#Meat, #Vegetables, #Sauces {
+  overflow-y: auto;
+  height: 60rem;
+}
+
+
+.ingredients-box img{
+  width: 20rem;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+
+.ingredients-box img:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 0.5s ease;
+}
+
+.ingredients-box {
+  overflow: none;
+  margin: 4rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  /* height: 12em; */
 }
 
-.ingredients-box {
-  width: 300px;
-  height: 200px;
-  /* background-color: #ccc; */
-  margin: 10px;
+.ingredients-box:hover {
+  letter-spacing: 0.1em;
 }
 
-.burger-box {
-  width: 100%;
-  height: 200px;
-}
-
-.wooden-board {
-  width: 50rem;
-}
-
-.burger-container img {
-  width: 100%;
-  cursor: pointer;
-  padding: 0%;
-  margin: 0%;
-}
-
-.ingridients-paragraph {
+.ingredients-box p {
+  font-weight: bold;
+  color: var(--yellow);
   text-align: center;
-  color: var(--orange);
-  font-size: larger;
-  text-shadow: 1px 5px 3px var(--yellow);
+  margin-top: 1em;
+  transition: 0.5s;
+  text-shadow: -2px 1px 3px rgb(0, 247, 214);
 }
 
-.arrow-up-left,
-.arrow-down-left,
-.arrow-up-right,
-.arrow-down-right {
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: var(--orange);
-  cursor: pointer;
-  z-index: 1;
+.ingredients-box p:hover {
+  letter-spacing: 0.1em;
+  color: red;
+  text-shadow: 1px 2px 1px var(--orange);
 }
 
-.hidden {
-  display: none;
+/* Buttons */
+.buttons {
+display: flex;
+flex-direction: row;
+align-items: baseline;
+justify-content: space-evenly;
+width: 100%;
 }
 
-.ingredients-box {
-  transition: transform 0.5s ease-in-out;
-  overflow: hidden;
-}
 
-.hidden {
-  height: 0;
-  opacity: 0;
-  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.show {
-  display: hidden;
-}
-
-#cart-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.sauces {
+#addToCart-btn, #deleteAll-btn  {
+  --c: #FFDE59; /* the color */
+  --b: .1em;    /* border length*/
+  --d: 20px;    /* the cube depth */
   
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  --_s: calc(var(--d) + var(--b));
+  
+  color: var(--c);
+  font-size:1rem;
+  padding: 5px;
+  border: solid #0000;
+  border-top-right-radius: 25px;
+  border-width: var(--b) var(--b) var(--_s) var(--_s);
+  background:
+    conic-gradient(at left var(--d)  bottom var(--d),
+      #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
+    conic-gradient(at left var(--_s) bottom var(--_s),
+      #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
+  transform: translate(calc(var(--d)/-1),var(--d));
+  clip-path: 
+    polygon(
+     var(--d) 0%, 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)),
+     100% calc(100% - var(--d)),
+     var(--d) calc(100% - var(--d))
+    );
+  transition: 0.5s;
 }
 
-.sauce-box {
-  width: 300px;
-  height: 200px;
-  border: 1px solid red;
-  margin: 10px;
+#addToCart-btn:hover ,#deleteAll-btn:hover {
+  transform: translate(0,0);
+  cursor: pointer;
+  color: rgb(0, 216, 0) ;
+  /* letter-spacing: 0.1em; */
+  clip-path: 
+    polygon(
+     0% var(--d), 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)), 
+     calc(100% - var(--d)) 100%, 
+     0% 100%
+   );
 }
 
+#deleteAll-btn:hover {
+  color: rgb(252, 0, 0) !important;
+}
+
+
+
+.logo img {
+  width: 30%;
+}
+
+#price {
+  color: white;
+  border: 2px solid var(--orange);
+  border-radius: 25px;
+  padding: 0.5em;
+}
+
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #888;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 /* End of custom burger CSS 🡹  */
 
