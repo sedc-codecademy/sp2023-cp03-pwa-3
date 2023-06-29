@@ -734,6 +734,12 @@ nav {
   box-sizing: border-box;
 }
 
+.single-menu span{
+  font-family:'Poppins', sans-serif ;
+  font-size: 14px;
+  color: #3F3F3F;
+}
+
 .container{
   width: 1200px;
   margin: 0 auto;
@@ -844,7 +850,6 @@ nav {
     margin-bottom: 30px;
   }
 }
-
 
 /* End of menu CSS 🡹  */
 
