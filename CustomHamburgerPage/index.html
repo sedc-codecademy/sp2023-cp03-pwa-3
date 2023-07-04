@@ -2,124 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
-  
-  <!-- Font Awesome  -->
+   <!-- Font Awesome  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-
-  <title>Make your own burger</title>
-  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="../style.css">
+  <title>Make your own Burger</title>
 </head>
 <body>
+  <header class="CustomHeader">
+      <span class="logo" style="color: red;"><img src="../images/CustomHamburgerPage-Images/logo example.png" alt="Logo"></span>
+      <h1 class="customBurgerTitle">Make your own burger</h1>
+  </header>
   <main>
+    <!-- Whole container -->
+    <div class="main-container">
+      <!-- Left side burger maker holder -->
+      <div class="burgerMaker">
 
+        <!-- Burger Name input  -->
+        <div class="burgerNameInput">
+          <div class="group">
+            <input type="text" id="burgerName" required>
+            <label for="burgerName">Give a name to your burger</label>
+            <div class="bar"></div>
+          </div>
+        </div>
+       
 
-  <h1 class="custom-burger-title">Make your own burger</h1>
-  <div class="burger-container">
+        <!-- Burger -->
+        <div class="burger">
+          
+          <img src="../images/CustomHamburgerPage-Images/Wooden-board.png" alt="Wooden-board">
+          <!-- Total amount -->
+          <span id="price">Price: 0.00$</span>
+        </div>
+         
+      </div>
+      
+      <!-- Right side ingredients -->
+      <div class="ingredientsContainer">
 
-    <!-- ingredients -->
-    <div class="ingredients">
-    <img src="../images/CustomHamburgerPage-Images/Wooden-board.png" alt="Wooden board">
+        <!-- ingredients tabs -->
+        <div class="ingredientsTabs">       
+  <div class="w3-row">
+    <a href="javascript:void(0)" onclick="openIngredients(event, 'Meat');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding" style="color:#FF914D; text-align: center;">Meat</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openIngredients(event, 'Vegetables');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding" style="color:#FF914D; text-align: center;">Vegetables</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openIngredients(event, 'Sauces');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding" style="color:#FF914D; text-align: center;">Sauces</div>
+    </a>
   </div>
 
+  <!-- Dinamicly -->
+  <div id="Meat" class="w3-container ingredient" style="display:none"></div>
 
-      <!-- slider up left -->
-      <div class="arrow-up-left">
-        <i class="fas fa-chevron-up"></i>
-      </div>
-      <div class="ingredients-box">
-        <img src="../images/CustomHamburgerPage-Images/Burger meat.png" alt="Burger meat">
-        <p class="ingridients-paragraph">Beef</p>
-      </div>
+  <div id="Vegetables" class="w3-container ingredient" style="display:none"></div>
 
-      <div class="ingredients-box">
-        <img src="../images/CustomHamburgerPage-Images/Chrispy-Chicken.png" alt="Chrispy chicken">
-        <p class="ingridients-paragraph">Chrispy chicken</p>
-      </div>
+  <div id="Sauces" class="w3-container ingredient" style="display:none"></div>
+</div>
 
-      <div class="ingredients-box">
-        <img src="../images/CustomHamburgerPage-Images/Bacon.png" alt="Bacon">
-        <p class="ingridients-paragraph">Bacon</p>
-      </div>
+        
 
-      <div class="ingredients-box">
-        <img src="../images/CustomHamburgerPage-Images/Spicy chicken.png" alt="Spicy chicken">
-        <p class="ingridients-paragraph">Spicy chicken</p>
-      </div>
+        <!-- Buttons -->
+        <div class="buttons">
+          <button id="deleteAll-btn">Delete All <i class="fa fa-trash" aria-hidden="true"></i></button>
+          <button id="addToCart-btn">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+        </div>
 
-      <!-- slider down left -->
-      <div class="arrow-down-left">
-        <i class="fas fa-chevron-down"></i>
       </div>
     </div>
 
-    <!-- burger -->
-    <div class="ingredients">
-      <div class="burger-ingredients-box">
-        <img src="../images/CustomHamburgerPage-Images/Wooden-board.png" alt="Wooden board" class="wooden-board">
-      </div>
+
+
+    <div class="scrollbar-hamburger">
+      <div class="scrollbar-line"></div>
     </div>
 
-    <!-- ingredients -->
-    <div class="ingredients">
-
-      <!-- Slider up right -->
-      <div class="arrow-up-right">
-        <i class="fas fa-chevron-up"></i>
-      </div>
-
-      <div class="ingredients-box">
-        <img src="../images/CustomHamburgerPage-Images/Tomatoes.png" alt="Tomatoes">
-        <p class="ingridients-paragraph">Tomatoes</p>
-      </div>
-
-      <div class="ingredients-box">
-        <img src="../images/CustomHamburgerPage-Images/Pickles.png" alt="Pickles">
-        <p class="ingridients-paragraph">Pickles</p>
-      </div>
-
-      <div class="ingredients-box">
-        <img src="../images/CustomHamburgerPage-Images/Onions.png" alt="Onions">
-        <p class="ingridients-paragraph">Onions</p>
-      </div>
-
-      <div class="ingredients-box">
-        <img src="../images/CustomHamburgerPage-Images/lettuce.png" alt="lettuce">
-        <p class="ingridients-paragraph">Lettuce</p>
-      </div>
-
-      <!-- slider down right -->
-      <div class="arrow-down-right">
-        <i class="fas fa-chevron-down"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="sauces">
-    <div class="sauce-box">
-      <img src="" alt="">
-    </div>
-    <div class="sauce-box">
-      <img src="" alt="">
-    </div>
-    <div class="sauce-box">
-      <img src="" alt="">
-    </div>
-    <div class="sauce-box">
-      <img src="" alt="">
-    </div>
-  </div>
-  
-
-  <button id="cart-btn">
-    Add to cart
-  </button>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-  <script src="../script.js"></script>
   </main>
+<footer>
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo obcaecati inventore voluptatum, sunt cupiditate iste neque quia iure harum fugiat fugit cum sint sed ducimus quaerat, corporis animi dolor? Neque.
+</footer>
+  <script src="../script.js"></script>
 </body>
 </html>
+
