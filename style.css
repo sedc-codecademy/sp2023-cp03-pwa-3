@@ -577,62 +577,95 @@ label {
 
 #mainDiv {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 1rem;
 
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .mainReviewDiv {
-
-  margin-bottom: 20px;
-  background-color: #1a1a1a;
-
-  padding: 1rem;
-  border: 1px solid #FF914D;
-  border-radius: 1rem;
-  width: 80%;
-}
-
-.allReviewsHeader {
-  color: var(--yellow)
-}
-
-.review-section {
+  
   margin-bottom: 20px;
   background-color: #1a1a1a;
   color: #FFDE59;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FF914D;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+}
+
+.navigation li {
+  margin-right: 1rem;
+}
+
+.navigation li a {
+  color: #FFDE59;
+  text-decoration: none;
+}
+
+/* Review Section Styles */
+.review-section {
+  margin-bottom: 2rem;
   padding: 1rem;
   border: 1px solid #FF914D;
   border-radius: 1rem;
-  width: 30%;
+  background-color: #1a1a1a;
+}
 
+.review-section h2 {
+  color: #FFDE59;
+  margin-bottom: 1rem;
 }
 
 .review-form {
   border: 1px solid #FFDE59;
   padding: 10px;
-  background-color: #1a1a1a;
+  background-color: #1a1a1a ;
   border: 0.5px solid #FFDE59;
-
+  
   text-align: center;
-
 }
 
 .user-info {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-
+  
 }
 
 .user-photo {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #3F3F3F;
-  ;
+  background-color: #3F3F3F;;
   margin-right: 10px;
 }
 
@@ -654,118 +687,93 @@ label {
   color: #FFDE59;
 }
 
-.rating {
-  margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-.rating label {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url(star.png);
-  background-size: cover;
-  cursor: pointer;
-}
-
 #submit-review {
   background-color: #FF914D;
   color: #eee;
   border: none;
   padding: 10px 20px;
-  margin-left: 10rem;
   cursor: pointer;
   transition: 0.4s;
 }
 
 #submit-review:hover {
-  background: linear-gradient(90deg, #FF914D, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #1a1a1a, #FF914D);
+  background: linear-gradient(90deg, #FF914D,#1a1a1a,#1a1a1a,#1a1a1a,#1a1a1a,#1a1a1a,#FF914D);
   border-radius: 0.3em;
-  color: #FFDE59;
-
-
+  color:#FFDE59;
+  
+  
 }
 
 
 
 
 
-* {
-  margin: 0;
-  padding: 0;
+*{
+    margin: 0;
+    padding: 0;
 }
-
 .rate {
-  float: left;
-  height: 46px;
-  padding: 0 10px;
+    float: left;
+    height: 46px;
+    padding: 0 10px;
 }
-
-.rate:not(:checked)>input {
-  position: absolute;
-  top: -9999px;
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
 }
-
-.rate:not(:checked)>label {
-  float: right;
-  width: 1em;
-  overflow: hidden;
-  white-space: nowrap;
-  cursor: pointer;
-  font-size: 30px;
-  color: #ccc;
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
 }
-
-.rate:not(:checked)>label:before {
-  content: '★ ';
+.rate:not(:checked) > label:before {
+    content: '★ ';
 }
-
-.rate>input:checked~label {
-  color: #FFDE59;
+.rate > input:checked ~ label {
+    color: #FFDE59  ;    
 }
-
-.rate:not(:checked)>label:hover,
-.rate:not(:checked)>label:hover~label {
-  color: gold;
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: gold;  
 }
-
-.rate>input:checked+label:hover,
-.rate>input:checked+label:hover~label,
-.rate>input:checked~label:hover,
-.rate>input:checked~label:hover~label,
-.rate>label:hover~input:checked~label {
-  color: #FFDE59;
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #FFDE59  ;
 }
 
 
 
 @media only screen and (max-width: 867px) {
-  #mainDiv {
-    justify-content: space-around;
-    display: grid;
-  }
-
+#mainDiv {
+  justify-content: space-around;
+  display: grid;
+}
   .review-section {
     padding: 10px;
     width: 90%;
 
-  }
+.review:first-child {
+  animation-delay: 0.1s; /* Add delay to the first review item for a staggered animation effect */
+}
 
   .mainReviewDiv {
     padding: 10px;
     width: 90%;
   }
-
   .user-info {
     flex-direction: column;
   }
 
-  .user-photo {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
+.review.hide {
+  animation: slideUp 0.4s ease forwards;
+}
 
   .user-details input,
   .review-content textarea {
@@ -779,20 +787,20 @@ label {
 
   #submit-review {
     width: 100%;
-    position: relative;
+    position:relative;
     display: flex;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
   }
-
+  
 }
 
 
 .reviews-list {
   margin-top: 20px;
   margin-left: 20px;
-
+  
 
 }
 
@@ -801,67 +809,62 @@ label {
   padding: 10px;
   margin-bottom: 10px;
   background-color: #1a1a1a;
-  border: 1px, solid, #FFDE59;
-
+  border: 1px, solid , #FFDE59;
+  
 }
 
 .review .review-header {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
-
+  
 }
 
-.review .review-header h3 {
+.review-title {
   margin: 0;
   color: var(--yellow);
-
+  
 }
 
 .review .review-header .username {
   margin-left: 10px;
   color: var(--orange);
-
+  
 }
 
-.review .review-body {
-  margin-bottom: 5px;
-  background-color: var(--grey);
+.review-body {
+  margin-top: 10px;
 }
 
-.review .review-body .user-photo {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #ccc;
-  margin-right: 10px;
-  flex-shrink: 0;
-}
-
-.review .review-body .rating {
+.review-text {
   margin: 0;
 }
 
-.review .review-body .review-text {
-  margin: 0;
+.like-button {
+  display: inline-block;
+  background-color: #FF914D;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
   color: #eee;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: 0.4s;
 }
 
-.reviews-container {
-  max-height: 400px;
-  overflow-y: auto;
-  overflow-x: hidden;
+.like-button:hover {
+  background-color: cornflowerblue;
 }
 
 .review {
   border: 1px solid #ccc;
   margin-bottom: 10px;
   padding: 10px;
-  display: none;
-  /* Initially hide review items */
+  display: none; /* Initially hide review items */
   animation: slideDown 0.4s ease;
 }
 
+/* Animation Styles */
 @keyframes slideDown {
   0% {
     opacity: 0;
@@ -875,13 +878,11 @@ label {
 }
 
 .review:first-child {
-  animation-delay: 0.1s;
-  /* Add delay to the first review item for a staggered animation effect */
+  animation-delay: 0.1s; /* Add delay to the first review item for a staggered animation effect */
 }
 
 .review.show {
-  display: block;
-  /* Show review items after animation */
+  display: block; /* Show review items after animation */
 }
 
 .review.hide {
@@ -900,36 +901,40 @@ label {
   }
 }
 
+/* Responsive Styles */
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: 0.5rem;
+  }
 
-.review-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .review-section {
+    padding: 0.5rem;
+  }
 
-.review-title {
-  margin: 0;
-}
+  .user-info {
+    flex-direction: column;
+  }
 
-.username {
-  font-size: 14px;
-  color: #666;
-}
+  .user-photo {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
 
-.review-body {
-  margin-top: 10px;
-}
+  .user-details input,
+  .review-content textarea {
+    width: 100%;
+  }
 
-.review-text {
-  margin: 0;
-}
+  .like-counter {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
 
-.like-button,
-.delete-button {
+.like-button , .delete-button {
   display: inline-block;
-
-  margin-top: 1rem;
-
+ 
+  margin-top: 1rem; 
+  
   background-color: var(--orange);
   border: none;
   cursor: pointer;
@@ -938,19 +943,16 @@ label {
   color: var(--grey);
   /* border-radius: 0.5rem; */
   text-align: center;
-
+  
 }
-
 .delete-button:hover {
-  background-color: #ff2727;
+  background-color:#ff2727;
   color: #eee;
 }
-
 .like-button:hover {
-  background-color: cornflowerblue;
+  background-color: cornflowerblue;  
   color: #eee;
 }
-
 /* .delete-button {
   background-color: #ff2727; 
   width: 5rem;
@@ -959,7 +961,6 @@ label {
   border-radius: 0.5rem;
   margin-top: 1rem; 
 
-} */
 
 
 /* End of rewiew burger CSS 🡹  */
