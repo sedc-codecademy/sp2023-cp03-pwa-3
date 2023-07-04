@@ -1,13 +1,13 @@
 /* Homepage SCRIPT 🡻 */
 
-var counter = 1;
-setInterval(function () {
-  document.getElementById(`radio` + counter).checked = true;
-  counter++;
-  if (counter > 3) {
-    counter = 1;
-  }
-}, 5000);
+// var counter = 1;
+// setInterval(function () {
+//   document.getElementById(`radio` + counter).checked = true;
+//   counter++;
+//   if (counter > 3) {
+//     counter = 1;
+//   }
+// }, 5000);
 
 /* End of Homepage SCRIPT 🡹  */
 
@@ -40,7 +40,7 @@ const meatMenu = [
   {
     name: "Spicy Chicken",
     price: 2.20,
-    img:` <img id="spicyChicken" src="../images/CustomHamburgerPage-Images/Spicy chicken.png" alt="Spicy chicken"></img>`
+    img: ` <img id="spicyChicken" src="../images/CustomHamburgerPage-Images/Spicy chicken.png" alt="Spicy chicken"></img>`
   },
   {
     name: "Bacon",
@@ -111,7 +111,7 @@ let totalHamburgerPrice = 0;
 
 // Function to sum total price from each image click
 function sumPrice(price) {
-  
+
   totalHamburgerPrice += price; // Add the price to the total
 
   // Show price in the container
@@ -123,25 +123,25 @@ function sumPrice(price) {
 
 
 // Tabs
-  function openIngredients(event, ingredientName) {
-    
-    let ingredient = document.getElementsByClassName("ingredient");
-    for (let i = 0; i < ingredient.length; i++) {
-      ingredient[i].style.display = "none";
-    }
-    let tablinks = document.getElementsByClassName("tablink");
-    for (let i = 0; i < ingredient.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+function openIngredients(event, ingredientName) {
 
-    }
-    document.getElementById(ingredientName).style.display = "block";
-    event.currentTarget.firstElementChild.className += " w3-border-red";
+  let ingredient = document.getElementsByClassName("ingredient");
+  for (let i = 0; i < ingredient.length; i++) {
+    ingredient[i].style.display = "none";
+  }
+  let tablinks = document.getElementsByClassName("tablink");
+  for (let i = 0; i < ingredient.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+
+  }
+  document.getElementById(ingredientName).style.display = "block";
+  event.currentTarget.firstElementChild.className += " w3-border-red";
 
 
-     // Meats selector (Adds meats on container )
-    let meatHTML = '';
-      for (let i = 0; i < meatMenu.length; i++) {
-      meatHTML += `
+  // Meats selector (Adds meats on container )
+  let meatHTML = '';
+  for (let i = 0; i < meatMenu.length; i++) {
+    meatHTML += `
       <div class="ingredients-box" onclick="sumPrice(${meatMenu[i].price})">
         <abbr title="Click to add">${meatMenu[i].img}</abbr>
         <p class="ingridients-paragraph">${meatMenu[i].name} ${meatMenu[i].price}$.</p>
@@ -151,32 +151,32 @@ function sumPrice(price) {
   meat.innerHTML = meatHTML;
 
 
-    //Vegetables selector (Adds vegetables on container)
-    let vegetablesHTML = '';
-    for (let i = 0; i < VegetablesMenu.length; i++) {
-      vegetablesHTML += `
+  //Vegetables selector (Adds vegetables on container)
+  let vegetablesHTML = '';
+  for (let i = 0; i < VegetablesMenu.length; i++) {
+    vegetablesHTML += `
       <div class="ingredients-box" onclick="sumPrice(${VegetablesMenu[i].price})">
         <abbr title="Click to add">${VegetablesMenu[i].img}</abbr>
         <p class="ingridients-paragraph">${VegetablesMenu[i].name} ${VegetablesMenu[i].price}$.</p>
       </div>
-    `;    
+    `;
   }
   vegetables.innerHTML = vegetablesHTML;
 
-    
-    // Sauces selector
-    let saucesHTML = '';
-    for (let i = 0; i < saucesMenu.length; i++) {
-      saucesHTML += `
+
+  // Sauces selector
+  let saucesHTML = '';
+  for (let i = 0; i < saucesMenu.length; i++) {
+    saucesHTML += `
       <div class="ingredients-box" onclick="sumPrice(${saucesMenu[i].price})">
         <abbr title="Click to add">${saucesMenu[i].img}</abbr>
         <p class="ingridients-paragraph">${saucesMenu[i].name} ${saucesMenu[i].price}$.</p>
       </div>
-    `;    
+    `;
   }
   sauces.innerHTML = saucesHTML;
-    
-  }
+
+}
 
 
 
@@ -203,6 +203,24 @@ function sumPrice(price) {
 /* Cart SCRIPT 🡻 */
 
 /* code for cart here  (delete this line)*/
+let cartBTN = document.getElementById("addToCart-btn");
+let box = document.getElementById("boXX");
+
+cartBTN.addEventListener("click", () => {
+  box.style.display = "block";
+})
+
+let btnYes = document.getElementById("btnYes");
+
+let pr = document.getElementById("priceL");
+
+
+btnYes.addEventListener("click", () => {
+  console.log("ff");
+  //pr.innerHTML="";
+  pr.innerHTML = pr.innerHTML +  "<p>DD</p>";
+});
+
 
 /* End of cart  SCRIPT 🡹  */
 
