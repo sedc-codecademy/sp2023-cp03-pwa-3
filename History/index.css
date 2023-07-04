@@ -7,6 +7,9 @@
 
 body {
     background-color: #3f3f3f;
+    background-image: url("../images/Theme-background.jpg");
+    background-size: cover;
+    background-position: center center;
 }
 
 .heading {
@@ -186,7 +189,7 @@ img {
 
 .box {
     padding: 16px;
-    background: #1b1226;
+    background: transparent;
     border-radius: 15px;
     transition: all 0.38s ease;
 }
