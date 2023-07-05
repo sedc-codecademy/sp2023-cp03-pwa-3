@@ -1,6 +1,6 @@
 /* Homepage SCRIPT 🡻 */
 
-var counter = 1;
+let counter = 1;
 setInterval(function () {
   document.getElementById(`radio` + counter).checked = true;
   counter++;
@@ -74,9 +74,9 @@ const VegetablesMenu = [
   }
 ];
 
-// array of objects sauces
+// array of objects toppings
 
-const saucesMenu = [
+const ToppingsMenu = [
   {
     name: 'Ketchup',
     price: 0.3,
@@ -96,30 +96,47 @@ const saucesMenu = [
     name: "Fry sauce",
     price: 0.4,
     img: `<img src="../images/CustomHamburgerPage-Images/Fry sauce .png" alt="Fry sauce">`
+  },
+  {
+    name: "Yellow cheese",
+    price: 0.7,
+    img: `<img src="../images/CustomHamburgerPage-Images/Cheese slice.png" alt="Cheese slice">`
+  },
+  {
+    name: "French fries",
+    price: 1,
+    img: `<img src="../images/CustomHamburgerPage-Images/French fries toppings.png" alt="French fries">` 
   }
 ];
 
 // Ingredients containers
 let meat = document.getElementById("Meat");
 let vegetables = document.getElementById("Vegetables");
-let sauces = document.getElementById("Sauces");
+let toppings = document.getElementById("Toppings");
+
+let ingredient = document.getElementById("ingredient");
+
+let burger = document.getElementById("BurgerCreating");
 
 let priceContainer = document.getElementById("price");
 
-// Define a variable to store the total price
+
+
+// Define a letiable to store the total price
 let totalHamburgerPrice = 0;
 
 // Function to sum total price from each image click
 function sumPrice(price) {
   
   totalHamburgerPrice += price; // Add the price to the total
-
   // Show price in the container
   priceContainer.innerHTML = `Price: ${totalHamburgerPrice.toFixed(2)}$`
-
   // Display the updated total price in the console
   //console.log("Total Price: $" + totalHamburgerPrice.toFixed(2));
 }
+
+
+
 
 
 // Tabs
@@ -129,6 +146,7 @@ function sumPrice(price) {
     for (let i = 0; i < ingredient.length; i++) {
       ingredient[i].style.display = "none";
     }
+
     let tablinks = document.getElementsByClassName("tablink");
     for (let i = 0; i < ingredient.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
@@ -138,11 +156,13 @@ function sumPrice(price) {
     event.currentTarget.firstElementChild.className += " w3-border-red";
 
 
+
+
      // Meats selector (Adds meats on container )
     let meatHTML = '';
       for (let i = 0; i < meatMenu.length; i++) {
       meatHTML += `
-      <div class="ingredients-box" onclick="sumPrice(${meatMenu[i].price})">
+      <div class="ingredients-box" id = "ingredient" onclick="sumPrice(${meatMenu[i].price})">
         <abbr title="Click to add">${meatMenu[i].img}</abbr>
         <p class="ingridients-paragraph">${meatMenu[i].name} ${meatMenu[i].price}$.</p>
       </div>
@@ -164,19 +184,109 @@ function sumPrice(price) {
   vegetables.innerHTML = vegetablesHTML;
 
     
-    // Sauces selector
-    let saucesHTML = '';
-    for (let i = 0; i < saucesMenu.length; i++) {
-      saucesHTML += `
-      <div class="ingredients-box" onclick="sumPrice(${saucesMenu[i].price})">
-        <abbr title="Click to add">${saucesMenu[i].img}</abbr>
-        <p class="ingridients-paragraph">${saucesMenu[i].name} ${saucesMenu[i].price}$.</p>
+    // toppings selector
+    let toppingsHTML = '';
+    for (let i = 0; i < ToppingsMenu.length; i++) {
+      toppingsHTML += `
+      <div class="ingredients-box" onclick="sumPrice(${ToppingsMenu[i].price})">
+        <abbr title="Click to add">${ToppingsMenu[i].img}</abbr>
+        <p class="ingridients-paragraph">${ToppingsMenu[i].name} ${ToppingsMenu[i].price}$.</p>
       </div>
     `;    
   }
-  sauces.innerHTML = saucesHTML;
+  toppings.innerHTML = toppingsHTML;
     
   }
+
+
+
+  // Pop up on buttons 
+  function openPopup() {
+    let popup = document.getElementById("popup");
+    popup.style.display = "block";
+  }
+  
+  // if yes is clicked
+  function handleYes() {
+    alert("Yes button clicked!");
+    closePopup();
+  }
+  
+  //  if no is clicked
+  function handleNo() {
+    alert("No button clicked!");
+    closePopup();
+  }
+  
+  // Closing pop up function
+  function closePopup() {
+    let popup = document.getElementById("popup");
+    popup.style.display = "none";
+  }
+  
+
+// Real time clock and status
+ // Function to display real-time clock and status
+function realtimeClock() {
+  var date = new Date();
+
+  // Formatting the date to display
+  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  var formattedDate = date.toLocaleDateString(undefined, options);
+
+  // Extracting hours, minutes, seconds, and AM/PM indicator
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var seconds = date.getSeconds();
+  var amPm = hours >= 12 ? 'PM' : 'AM';
+
+  // Converting hours to 12-hour format
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+
+  // Displaying the date and time in the specified format
+  var clock = document.getElementById('clock');
+  clock.innerHTML =
+    formattedDate +
+    ' ' +
+    hours +
+    ':' +
+    addZeroPadding(minutes) +
+    ':' +
+    addZeroPadding(seconds) +
+    ' ' +
+    amPm;
+
+  // Checking if the current time falls within the desired range (7 AM to 9 PM) and it's not Sunday
+  var statusElement = document.getElementById('status');
+  var isOpen =
+    (hours >= 7 && amPm === 'AM') ||
+    (hours < 9 && amPm === 'PM') ||
+    (date.getDay() !== 0); // Sunday is represented by 0 in JavaScript's Date object
+
+  // Updating the status message and color based on the opening status
+  if (isOpen) {
+    statusElement.innerHTML = 'Open';
+    statusElement.style.color = 'green';
+  } else {
+    statusElement.innerHTML = 'Closed';
+    statusElement.style.color = 'red';
+  }
+
+  // Updating the clock and status every second
+  setTimeout(realtimeClock, 1000);
+}
+
+// Function to add zero padding to single-digit values
+function addZeroPadding(value) {
+  return value < 10 ? '0' + value : value;
+}
+
+// Call the realtimeClock function initially to start the clock and status updates
+realtimeClock();
+
+
+
 
 
 

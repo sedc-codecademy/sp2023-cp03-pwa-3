@@ -184,30 +184,49 @@ nav {
 
 /* Custom burger CSS 🡻 */
 
-.customBurgerTitle {
-  text-align: center;
-  color: var(--yellow);
-}
-
 .CustomHeader {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 150px !important;
+  margin-right: 10px;
+}
+
+.customBurgerTitle {
+  /* font-size: 16px; */
+  text-align: center;
+  color: var(--yellow);
+  margin: 0;
 }
 
 .main-container {
 display: flex;
 flex-direction: row;
 justify-content: space-around;
+max-height: 100vh;
 }
 
 /* Placeholder for making burger */
 .burgerMaker{
 display: flex;
 flex-direction: column;
-justify-content: center;
 align-items: center;
 width: 50%;
+max-height: 90vh !important;
 }
 
+.burger {
+  max-height: 90vh !important;
+}
 
 .ingredientsContainer {
 display: flex;
@@ -227,7 +246,7 @@ width: 50%;
 /* CSS Variables */
 :root {
 
-  --width: 30rem;
+  --width: 20rem;
 }
 
 /* Centered Container */
@@ -322,34 +341,39 @@ label {
   }
 
   /* all images in burger */
-.burger img {
-  width: 100%;
+/* .burger img {
+
+} */
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: none;
+
 }
 
-
-/*  
- div {
+ 
+ /* div {
 
  border: red solid 2px; 
 }  */
 
 .w3-container {
-display: flex;
-flex-direction: column;
-justify-content: space-between;
 padding: 2rem;
-
+max-height: 90vh;
 }
 
 
-#Meat, #Vegetables, #Sauces {
+#Meat, #Vegetables, #Toppings {
   overflow-y: auto;
-  height: 60rem;
+  max-height: 90vh;
 }
 
 
 .ingredients-box img{
-  width: 20rem;
+  width: 15rem;
   cursor: pointer;
   transition: 0.5s ease;
 }
@@ -369,7 +393,7 @@ padding: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 12em; */
+  
 }
 
 .ingredients-box:hover {
@@ -452,10 +476,26 @@ width: 100%;
   color: rgb(252, 0, 0) !important;
 }
 
-
-
 .logo img {
   width: 30%;
+}
+
+
+/* Ingredients in burger */
+.bunTop {
+  width: 250px;
+  position: relative;
+  top: 28.3rem;
+  z-index: 2;
+  left: 1rem;
+}
+
+.bunBottom{
+  width: 250px;
+  position: relative;
+  top: 27rem;
+  left: 1rem;
+  z-index: 1;
 }
 
 #price {
@@ -463,6 +503,7 @@ width: 100%;
   border: 2px solid var(--orange);
   border-radius: 25px;
   padding: 0.5em;
+  align-self: flex-start;
 }
 
 
@@ -487,6 +528,93 @@ width: 100%;
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+
+/* Pop up on cart btn */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.close-button:hover {
+  color: red;
+}
+
+.popup-content {
+  background-color: #f0cc7d9a;
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup-content img {
+  width: 100px;
+  margin-top: -100px;
+}
+
+.popup-buttons {
+  margin-top: 20px;
+}
+
+.popup-buttons button {
+  margin: 0 5px;
+  width: 5rem;
+  color: var(--yellow);
+  border-radius: 25px;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.popup-buttons button:hover {
+  cursor: pointer;
+  color: var(--orange);  
+  border: 2px solid rgb(252, 103, 4);
+  border-radius: 0px;
+  box-shadow: 1px 1px 3px 1px yellow;
+}
+
+
+.clock-container {
+
+position: absolute;
+right: 10px;
+top: 20px;
+}
+
+#clock {
+  margin-right: 3px;
+}
+
+#status {
+  display: flex;
+  justify-content: center ;
+}
+
+
+
+
+
+
 
 /* End of custom burger CSS 🡹  */
 
