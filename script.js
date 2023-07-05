@@ -211,15 +211,57 @@ cartBTN.addEventListener("click", () => {
 })
 
 let btnYes = document.getElementById("btnYes");
+let btnNo = document.getElementById("btnNo");
 
-let pr = document.getElementById("priceL");
-
+let cards = document.getElementById("cards");
+let burgerName = document.getElementById("burgerName");
+let cardBox = document.getElementById("cardBox");
+cardBox.style.display = "none";
 
 btnYes.addEventListener("click", () => {
-  console.log("ff");
-  //pr.innerHTML="";
-  pr.innerHTML = pr.innerHTML +  "<p>DD</p>";
+  if (burgerName.value == "") {
+    window.alert("Enter the name of the burger");
+  } else {
+    document.documentElement.scrollTop = 0;
+    let div = document.createElement("div");
+    div.innerHTML = div.innerHTML +
+      `<div> 
+     <p style="text-align: center;"><img src="../Card/R.png" style="display: block; width: 200px; height: 200px; margin-left: auto; margin-right: auto;"></p>
+     <p style="text-align: center;"><span style="display: block;">Name: ${burgerName.value}</span></p>
+     <p style="text-align: center;">Price: ${totalHamburgerPrice.toFixed(2)} $</p>
+   </div>`;
+    div.setAttribute("id", "cardNo")
+    div.setAttribute("class", "cardNo");
+    cards.appendChild(div);
+    totalHamburgerPrice = 0;
+    burgerName.value = "";
+    priceContainer.innerHTML = `Price: ${totalHamburgerPrice.toFixed(2)}$`
+  }
 });
+
+btnNo.addEventListener("click", () => {
+  if (burgerName.value == "") {
+    window.alert("Enter the name of the burger");
+  } else {
+
+    let div = document.createElement("div");
+    div.innerHTML = div.innerHTML +
+      `<div> 
+     <p style="text-align: center;"><img src="../Card/R.png" style="display: block; width: 200px; height: 200px; margin-left: auto; margin-right: auto;"></p>
+     <p style="text-align: center;"><span style="display: block;">Name: ${burgerName.value}</span></p>
+     <p style="text-align: center;">Price: ${totalHamburgerPrice.toFixed(2)} $</p>
+    </div>`;
+    div.setAttribute("id", "cardNo")
+    div.setAttribute("class", "cardNo");
+    cards.appendChild(div);
+    totalHamburgerPrice = 0;
+    burgerName.value = "";
+    priceContainer.innerHTML = `Price: ${totalHamburgerPrice.toFixed(2)}$`
+  }
+  cardBox.style.display = "block";
+  window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+
+})
 
 
 /* End of cart  SCRIPT 🡹  */

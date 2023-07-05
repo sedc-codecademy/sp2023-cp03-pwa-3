@@ -1,0 +1,25 @@
+.CardBox {
+    border: 2px solid black;
+
+}
+
+.cards {
+    display: flex;
+    margin: 5%;
+    color: aliceblue;
+    justify-content: space-evenly;
+    border: 2px solid black;
+
+    flex-wrap: wrap;
+}
+
+.cardNo {
+    /* flex-direction: row; */
+    border: 2px solid black;
+    margin: 1%;
+    width: 30%;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+}
