@@ -23,6 +23,71 @@ body {
   background-image: url(./images/Theme-background.jpg);
 }
 
+<<<<<<< HEAD
+=======
+nav {
+  background-color: #FFDE59;
+  color: #fff;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu li {
+  margin-left: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background-color: #333;
+    padding: 10px;
+  }
+
+  .menu.active li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+>>>>>>> ee76e348c1c28f1ca084658339e3a5511f8eaeb5
 
 /* End of Homepage CSS 🡹  */
 
@@ -30,7 +95,90 @@ body {
 
 /* Navigation bar CSS 🡻 */
 
-/* code for custom burger here  (delete this line)*/
+.navbar{
+  width: 300px;
+  height: 100%;
+  background-color: #3F3F3F;  
+  position: fixed;
+  top: 0;
+  left: -300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 20%  60% 0;
+  transition: left 0.8s cubic-bezier(1,0,0,1);
+}
+.change{
+  left: 0;
+}
+
+.Menue{
+  width: 35px;
+  height: 30px;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.line{
+  width: 100%;
+  height: 3px;
+  background-color: chocolate;
+  transition: all 0.8s;
+}
+.change .line-1{
+  transform:  rotateZ(-405deg) translate(-8px,6px);
+}
+.change .line-2{
+  opacity: 0;
+}
+.change .line-3{
+  transform:  rotateZ(405deg) translate(-8px,-6px);
+}
+
+.nav-list{
+  text-align: right;
+}
+.nav-item{
+  list-style: none;
+  margin: 25px;
+}
+.nav-links{
+  text-decoration: none;
+  font-size: 22px;
+  color: #eee;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 3px 0;
+}
+.nav-links::before,
+.nav-links::after{
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: chocolate;
+  position: absolute;
+  left: 0;  
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.nav-links::after{
+  bottom: 0;
+  transform-origin: right;
+}
+.nav-links::before{
+  top: 0;
+  transform-origin: left;
+}
+.nav-links:hover::before,
+.nav-links:hover::after{
+  transform: scaleX(1);
+}
 
 /* Navigation bar CSS 🡹  */
 
@@ -74,42 +222,44 @@ body {
   gap: 10px;
   width: 80%;
   margin: auto;
-  border: 0.1rem solid;
-
+  border: 0.2rem solid;
+  border-radius: 2%;
   border-color:#FF914D;
 }
 
 .customer-post {
   display: flex;
   background-color: var(--grey);
-  padding: 15px;
-  border-radius: 8px;
+  padding: 40px;
+  border-radius: 9px;
 }
 
 .customer-details {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .customer-details img {
-  width: 5rem;
+  width: 6rem;
   height: 2.5rem;
   border-radius: 50%;
 }
 
 .customer-review {
   flex-grow: 1;
+  text-align: end;
+  text-decoration-line: underline;
 }
 
 .star-rating {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 15px;
 }
 
 .star-rating .star {
-  font-size: 25px;
+  font-size: 35px;
   color: #ccc;
   cursor: pointer;
 }
@@ -129,18 +279,19 @@ body {
 }
 
 h3, h4, p {
+  font-size: 20px;
   margin: 0;
 }
 
 .mainDiv {
-  background-color: black;
+  background-color: rgb(37, 37, 37);
   color: rgb(196, 196, 196);
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-5%, -40%);
   border: 0.1rem solid;
-  border-radius: 0.5rem;
+  border-radius:1rem;
   border-color:#FF914D;
   align-items: center;
   justify-items: center;
@@ -152,6 +303,7 @@ h3, h4, p {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 /* End of history CSS 🡹  */
 
@@ -529,3 +681,93 @@ h3, h4, p {
 /* code for menu here  (delete this line)*/
 
 /* End of menu CSS 🡹  */
+
+
+
+
+
+/* Footer CSS 🡻 */
+footer{
+  background-color:#3F3F3F ;
+}
+.footerContainer{
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+.socialMediaIcons{
+  display: flex;
+  justify-content: center;
+}
+.socialMediaIcons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: #ccc;
+  margin: 10px;
+  border-radius: 50%;
+}
+.socialMediaIcons a i{
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+/*Hover effect on social media icons*/
+.socialMediaIcons a:hover{
+  background-color: #FFDE59;
+  transition: 0.5s;
+}
+.socialMediaIcons a:hover i{
+  color:#FF914D ;
+  transition: 0.5s;
+}
+
+/*Footer navigation bar */
+.footerNav{
+  margin: 30px 0;
+}
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.footerNav ul li a{
+  color:white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.footerNav ul li a:hover{
+  opacity: 1;
+}
+
+/*Footer bottom text */
+
+.footerBottom{
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+}
+.footerBottom p{
+  color: white;
+}
+.designer{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+/*Making footer responsive for mobile devices*/
+@media (max-width:700px){
+  .footerNav ul{
+    flex-direction: column;
+  }
+  .footerNav ul li{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
+}
+/* End of footer CSS 🡹  */
