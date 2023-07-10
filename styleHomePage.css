@@ -119,14 +119,14 @@ body {
 }
 
 nav {
-  background-color: var(--yellow);
-  padding: 10px;
+  background-color: var(--orange);
+  padding: 10px 0;
   position: fixed;
   top: 0;
   width: 100%;
+  height: 60px;
   z-index: 1;
 }
-
 
 ul {
   list-style-type: none;
@@ -139,21 +139,21 @@ ul {
 
 li {
   margin-right: 10px;
-  display: flex;
-  align-items: center;
 }
 
 a {
-  color: white;
+  color: var(--grey);
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 8px 16px;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 a:hover {
-  background-color: var(--orange);
+  background-color: var(--yellow);
+  color: white;
 }
+
 
 footer {
   background-color: #3F3F3F;
@@ -202,6 +202,20 @@ footer {
 
 .social-footer a:hover {
   transform: scale(1.05);
+}
+
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logo img {
+  width: 70px; /* Adjust the width as needed */
+  height: 70px; /* Adjust the height as needed */
+  margin-right: 10px; /* Add margin if necessary */
 }
 
 
