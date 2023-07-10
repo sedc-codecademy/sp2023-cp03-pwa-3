@@ -581,7 +581,7 @@ label {
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 1rem;
-
+}
 /* General Styles */
 * {
   margin: 0;
@@ -592,8 +592,8 @@ label {
 .mainReviewDiv {
   
   margin-bottom: 20px;
-  background-color: #1a1a1a;
-  color: #FFDE59;
+  background-color: var(--orange);
+  color: #1a1a1a;
   font-family: Arial, sans-serif;
 }
 
@@ -650,7 +650,7 @@ label {
   padding: 10px;
   background-color: #1a1a1a ;
   border: 0.5px solid #FFDE59;
-  
+  color: var(--c);
   text-align: center;
 }
 
@@ -661,17 +661,23 @@ label {
   
 }
 
-.user-photo {
+
+
+.user-photo img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #3F3F3F;;
+  object-fit: cover;
+  /* background-image: url('../../Desktop/dobro-jutro-dobar-dan-neka-tije-suncem-obasjan-24289589.png'); */
+  background-size: cover;
+  background-position: center;
   margin-right: 10px;
 }
 
+
 .user-details input {
-  margin-bottom: 5px;
-  background-color: #3F3F3F;
+  margin-bottom: 1px;
+  background-color: var(--orange);
   height: 1.5rem;
   border: 0.1px solid #FFDE59;
   border-radius: 3px;
@@ -685,6 +691,13 @@ label {
   margin-bottom: 2rem;
   background-color: #3F3F3F;
   color: #FFDE59;
+}
+
+.counter {
+  color: var(--grey);
+ background-color: var(--orange);
+ border-radius: 5px;
+ 
 }
 
 #submit-review {
@@ -705,51 +718,6 @@ label {
 }
 
 
-
-
-
-*{
-    margin: 0;
-    padding: 0;
-}
-.rate {
-    float: left;
-    height: 46px;
-    padding: 0 10px;
-}
-.rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-}
-.rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
-}
-.rate:not(:checked) > label:before {
-    content: '★ ';
-}
-.rate > input:checked ~ label {
-    color: #FFDE59  ;    
-}
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-    color: gold;  
-}
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
-    color: #FFDE59  ;
-}
-
-
-
 @media only screen and (max-width: 867px) {
 #mainDiv {
   justify-content: space-around;
@@ -757,14 +725,14 @@ label {
 }
   .review-section {
     padding: 10px;
-    width: 90%;
-
+    width: 80%;
+  }
 .review:first-child {
   animation-delay: 0.1s; /* Add delay to the first review item for a staggered animation effect */
 }
 
   .mainReviewDiv {
-    padding: 10px;
+    padding: 20px;
     width: 90%;
   }
   .user-info {
@@ -793,8 +761,9 @@ label {
     margin-left: auto;
     margin-right: auto;
   }
-  
 }
+  
+
 
 
 .reviews-list {
@@ -810,13 +779,13 @@ label {
   margin-bottom: 10px;
   background-color: #1a1a1a;
   border: 1px, solid , #FFDE59;
-  
+  color: #FFDE59;
 }
 
 .review .review-header {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   
 }
 
@@ -827,17 +796,17 @@ label {
 }
 
 .review .review-header .username {
-  margin-left: 10px;
+  margin-left: 30px;
   color: var(--orange);
-  
 }
 
 .review-body {
   margin-top: 10px;
+  
 }
 
 .review-text {
-  margin: 0;
+  padding-bottom: 30px;
 }
 
 .like-button {
@@ -850,6 +819,7 @@ label {
   border-radius: 0.5rem;
   text-align: center;
   transition: 0.4s;
+  margin-right: 10px ;
 }
 
 .like-button:hover {
@@ -863,6 +833,8 @@ label {
   display: none; /* Initially hide review items */
   animation: slideDown 0.4s ease;
 }
+
+
 
 /* Animation Styles */
 @keyframes slideDown {
@@ -928,6 +900,7 @@ label {
   .like-counter {
     margin-left: 0;
     margin-top: 0.5rem;
+    
   }
 
 .like-button , .delete-button {
@@ -953,14 +926,15 @@ label {
   background-color: cornflowerblue;  
   color: #eee;
 }
-/* .delete-button {
+}
+.delete-button {
   background-color: #ff2727; 
   width: 5rem;
   height: 2rem;
   color: #eee;
   border-radius: 0.5rem;
   margin-top: 1rem; 
-
+}
 
 
 /* End of rewiew burger CSS 🡹  */
