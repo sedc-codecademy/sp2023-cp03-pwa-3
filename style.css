@@ -577,24 +577,47 @@ label {
 
 #mainDiv {
   display: flex;
-  justify-content: space-between; 
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: 1rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+ 
+  height: auto;
+  gap: 3rem;
+  margin: 0%;
+
 }
+
 /* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+#ReviewSectionNavBar {
+  background-color: #1a1a1a;
+  margin-bottom: 0%;
+}
+
+#footerContainer {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0%;
+}
+
+#social-footer{
+  align-items: center;
+  justify-content: center;
+}
 
 .mainReviewDiv {
-  
-  margin-bottom: 20px;
-  background-color: var(--orange);
-  color: #1a1a1a;
-  font-family: Arial, sans-serif;
+ color: #FF914D;
+ max-height: 400px;
+ overflow-y: auto;
+ max-width: 700px;
+ 
 }
 
 .container {
@@ -631,13 +654,18 @@ label {
   text-decoration: none;
 }
 
+.login-form {
+  display: flex;
+  justify-content: space-around;
+
+}
+
 /* Review Section Styles */
 .review-section {
-  margin-bottom: 2rem;
   padding: 1rem;
   border: 1px solid #FF914D;
-  border-radius: 1rem;
   background-color: #1a1a1a;
+
 }
 
 .review-section h2 {
@@ -732,8 +760,8 @@ label {
 }
 
   .mainReviewDiv {
-    padding: 20px;
-    width: 90%;
+    
+    width: 100%;
   }
   .user-info {
     flex-direction: column;
@@ -763,16 +791,12 @@ label {
   }
 }
   
-
-
-
 .reviews-list {
   margin-top: 20px;
   margin-left: 20px;
   
 
 }
-
 .review {
   border: 1px solid #ccc;
   padding: 10px;
@@ -780,6 +804,9 @@ label {
   background-color: #1a1a1a;
   border: 1px, solid , #FFDE59;
   color: #FFDE59;
+  max-width: 100%;
+  height: fit-content;
+ 
 }
 
 .review .review-header {
@@ -905,9 +932,7 @@ label {
 
 .like-button , .delete-button {
   display: inline-block;
- 
   margin-top: 1rem; 
-  
   background-color: var(--orange);
   border: none;
   cursor: pointer;

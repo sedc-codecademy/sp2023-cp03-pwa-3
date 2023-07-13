@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css" >
+  <link rel="stylesheet" href="../styleHomePage.css">
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
   <title>Leave a comment</title>
 </head>
 <style>
@@ -16,15 +19,28 @@
   }
 </style>
 <body>
-  <div class="login-section">
-    <h2>Login</h2>
-    <div class="login-form">
-      <input type="text" id="username" placeholder="Your Name">
-      <button id="login-button">Log In</button>
-      <button id="logout-button" style="display: none;">Log Out</button>
-    </div>
-  </div>
-
+  <nav id="ReviewSectionNavBar">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/CustomHamburgerPage/index.html">Make your own</a></li>
+      <li><a href="/MenuPage/index.html">Menu</a></li>
+      <li class="logo"><img src="/images/CustomHamburgerPage-Images/logo example.png" alt="Logo"></li>
+      <li><a href="/History/index.html">History</a></li>
+      <li><a href="/ReviewsPage/index.html">Review Page</a></li>
+      <li><a href="/Contact/index.html">Contact</a></li>
+      <li>
+        <div class="login-section">
+          <div class="login-form">
+            <input type="text" id="username" placeholder="Your Name">
+            <button id="login-button">Log In</button>
+            <button id="logout-button" style="display: none;">Log Out</button>
+          </div>
+        </div>
+      </li>
+      
+    </ul>
+  </nav>
+  
   <div id="mainDiv">
     <div class="review-section">
       <h2>Leave a Review</h2>
@@ -65,6 +81,27 @@
     </div>
   </div>
 
+  <footer>
+    <div id="footerContainer">
+      <div id="social-footer">
+        <a href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-google-plus"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footerBottom">
+      <p>Copyright &copy;2023; All right reserved to one and only <span class="designer">Lesperi SEDC</span></p>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
