@@ -1066,6 +1066,18 @@ label {
   border-radius: 7px;
 }
 
+.female-order{
+  width: 100px;
+  height: 100px;
+justify-content: center;
+}
+.male-order{
+  width: 100px;
+  height: 100px;
+justify-content: center;
+}
+
+
 @media only screen and (max-width: 767px) {
   .container {
     width: 350px;
