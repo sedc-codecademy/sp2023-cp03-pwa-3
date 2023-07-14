@@ -1,8 +1,8 @@
 /* CSS for the card layout */
     .card {
-    
         display:block;
-        place-items: center;
+        margin-left: auto;
+        margin-right: auto;
         width: 1400px;
         border: 0.6px solid #ffffff;
         border-radius: 2px;
@@ -14,7 +14,7 @@
 
     .user {
     
-    border: 0.6px solid #acacac;
+    border: 0.6px solid #acacac;  
     border-radius: 4px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     font-size: 1.3em;
