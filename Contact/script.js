@@ -1,8 +1,16 @@
 const menuIcon = document.querySelector('.Menue')
 const navbar=document.querySelector('.navbar')
+const blurOverlay = document.querySelector('.blur');
 
 menuIcon.addEventListener('click',()=>{
 navbar.classList.toggle('change');
+if (blurOverlay.style.backdropFilter === 'blur(10px)') {
+  blurOverlay.style.backdropFilter = 'none';
+  blurOverlay.style.zIndex=500;
+} else {
+  blurOverlay.style.backdropFilter = 'blur(10px)';
+  blurOverlay.style.zIndex = 2000;
+}
 })
 const inputs = document.querySelectorAll(".input");
 

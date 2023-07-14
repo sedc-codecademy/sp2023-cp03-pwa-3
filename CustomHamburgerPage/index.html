@@ -1,22 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="../style.css">
-  <title>Make your own burger</title>
-  
+  <link rel="stylesheet" href="../Card/card.css" type="text/css">
+  <title>Make your own Burger</title>
 </head>
+
 <body>
-  
-  <h1 class="custom-burger-title">Make your own burger</h1>
+  <header class="CustomHeader">
+    <span class="logo" style="color: red;"><img src="../images/CustomHamburgerPage-Images/logo example.png"
+        alt="Logo"></span>
+    <h1 class="customBurgerTitle">Make your own burger</h1>
+  </header>
+  <main>
+    <!-- Whole container -->
+    <div class="main-container">
+      <!-- Left side burger maker holder -->
+      <div class="burgerMaker">
 
-  <div class="burger-container">
-    <img src="../images/CustomHamburgerPage-Images/Wooden-board.png" alt="Wooden board">
-  </div>
-<h1> Test H1 Kosta</h1>
+        <!-- Burger Name input  -->
+        <div class="burgerNameInput">
+          <div class="group">
+            <input type="text" id="burgerName" required>
+            <label for="burgerName">Give a name to your burger</label>
+            <div class="bar"></div>
+          </div>
+        </div>
 
+
+        <!-- Burger -->
+        <div class="burger">
+
+          <img src="../images/CustomHamburgerPage-Images/Wooden-board.png" alt="Wooden-board">
+          <!-- Total amount -->
+          <span id="price">Price: 0.00$</span>
+        </div>
+
+      </div>
+
+      <!-- Right side ingredients -->
+      <div class="ingredientsContainer">
+
+        <!-- ingredients tabs -->
+        <div class="ingredientsTabs">
+          <div class="w3-row">
+            <a href="javascript:void(0)" onclick="openIngredients(event, 'Meat');">
+              <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"
+                style="color:#FF914D; text-align: center;">Meat</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openIngredients(event, 'Vegetables');">
+              <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"
+                style="color:#FF914D; text-align: center;">Vegetables</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openIngredients(event, 'Sauces');">
+              <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"
+                style="color:#FF914D; text-align: center;">Sauces</div>
+            </a>
+          </div>
+
+          <!-- Dinamicly -->
+          <div id="Meat" class="w3-container ingredient" style="display:none"></div>
+
+          <div id="Vegetables" class="w3-container ingredient" style="display:none"></div>
+
+          <div id="Sauces" class="w3-container ingredient" style="display:none"></div>
+        </div>
+
+
+
+        <!-- Buttons -->
+        <div class="buttons">
+          <button id="deleteAll-btn">Delete All <i class="fa fa-trash" aria-hidden="true"></i></button>
+          <button id="addToCart-btn">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+        </div>
+
+
+
+
+
+        <div class="box" id="boXX" style="display: none;">
+          <div class="questionBox">
+            <p>Do you want to make another order?</p>
+            <div>
+              <button id="btnYes" class="btn1">Yes</button>
+              <button id="btnNo" class="btn1">No</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+
+
+    <div class="scrollbar-hamburger">
+      <div class="scrollbar-line"></div>
+    </div>
+
+
+
+    <section class="CardBox" id="cardBox">
+      <div class="cards" id="cards">
+      </div>
+    </section>
+
+
+
+  </main>
+  <footer>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo obcaecati inventore voluptatum, sunt cupiditate
+    iste neque quia iure harum fugiat fugit cum sint sed ducimus quaerat, corporis animi dolor? Neque.
+  </footer>
   <script src="../script.js"></script>
 </body>
+
 </html>

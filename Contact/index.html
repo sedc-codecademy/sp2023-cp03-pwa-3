@@ -5,12 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" >
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
 </head>
 <body>
+    <div class="blur"></div>              
     <div class="container">
         <div class="form">
-         <div class="contact-info"></div>
+         <div class="contact-info">
+            <h3 id="title">Let's get in touch</h3>
+            <p class="text">HERE ARE OUR CONTACT INFO:</p>
+            <div class="info">
+                <div class="information">
+                    <img src="icons/orange-location-icon-png-18.png" class="icon" alt="">
+                    <p>11 Октомври 33A, 1000 Скопје</p>
+                </div>
+                <div class="information">
+                    <img src="icons/584856ade0bb315b0f7675ab.png" class="icon" alt="">
+                    <p>sedc@seavus.com. sedc.ohrid</p>
+                </div>
+                <div class="information">
+                    <img src="icons/download-removebg-preview.png" class="icon" alt="">
+                    <p>+38978 341 777</p>
+                </div>
+            </div>
+            <div class="social-media">
+                <p>CONNECT WITH US:</p>
+                <div class="social-icons">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-google-plus"></i>
+                    </a>
+                </div>
+            </div>
+         </div>
+       
         <div class="contact-form">
             <form action="inde">
                 <h3 class="title">Contact us</h3>
@@ -25,7 +65,7 @@
                     <span>Email</span>
                 </div>
                 <div class="input-container focus">
-                    <input type="tel" name="phone" class="input">
+                    <input type="tel" name="phone" class="input" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                     <label for="">Phone</label>
                     <span>Phone</span>
                 </div>
@@ -37,9 +77,10 @@
                 <input type="submit" value="Send" class="btnSend">
             </form>
      </div>
-    </div>
-     
-    </div>
+    </div> 
+ </div>
+   
+
     <!-- nav bar od ovde nadolu---------------------------------- -->
       <nav class="navbar">
         <div class="Menue">
@@ -72,6 +113,27 @@
         </ul>
      </nav>
     </div>
+    <footer>
+        <div class="footerContainer">
+        <div class="social-footer">
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-google-plus"></i>
+            </a>
+        </div>
+    </div>
+    <div class="footerBottom">
+        <p>Copyright &copy;2023; All right reserved to one and only <span class="designer">Lesperi SEDC</span></p>
+      </div>
+    </footer>
 <!-- -------------------------------------------------------------------------- -->
 
 
