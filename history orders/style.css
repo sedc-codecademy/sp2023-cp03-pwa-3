@@ -4,9 +4,8 @@
         display:block;
         place-items: center;
         width: 1400px;
-        
         border: 0.6px solid #ffffff;
-        border-radius: 7px;
+        border-radius: 2px;
         padding: 10px;
         margin-bottom: 20px;
         box-shadow: 0 10px 10px rgba(204, 204, 204, 0.5);
@@ -23,7 +22,9 @@
     margin-bottom: 2px;
     margin-top: 20px;
     background-color: rgb(214, 212, 212);
-    
+  }
+  .user:hover{
+    background-color: #acacac;
   }
   
   .datetime {
@@ -43,11 +44,15 @@
     font-family:Arial, Helvetica, sans-serif;
     padding: 10px;
   }
-  
+  .h1:hover{
+    cursor : pointer;
+    
+  }
   h1 {
+    
     text-align: center;
     margin-bottom: 50px;
-    color: #ede3e3;
+    color: #FF914D;
   }
   h5{
     margin-right: auto;
