@@ -9,7 +9,10 @@
 </head>
 <style>
   body {
-    background-image: url(../images/Theme-background.jpg);
+    /* background-image: url(../images/Theme-background.jpg); */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/Theme-background.jpg);
+    background-blend-mode: multiply;
+    backdrop-filter: blur(2px);
   }
 </style>
 <body>
@@ -28,7 +31,7 @@
       <div class="review-form">
         <div class="user-info">
           <div class="user-photo">
-            <!-- Place for user photo -->
+            <img src="../images/Screenshot 2023-07-06 121848.png" alt="User Photo">
           </div>
           <div class="user-details">
             <p id="logged-in-username">Ovde UserName</p>
@@ -56,6 +59,7 @@
           </div>
           <!-- Counter and button -->
         </div>
+        
         <!-- Review items will be dynamically added here -->
       </div>
     </div>
