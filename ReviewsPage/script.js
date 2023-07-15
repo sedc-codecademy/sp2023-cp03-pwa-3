@@ -13,7 +13,8 @@ function checkLoginStatus() {
 // Handle the login button click
 document.getElementById('login-button').addEventListener('click', function() {
   var username = document.getElementById('username').value;
-  if (username.trim() !== '') {
+  var password = document.getElementById('password').value;
+  if (username.trim() !== '' && password.trim() !== '') {
     localStorage.setItem('loggedInUsername', username);
     document.getElementById('username').readOnly = true;
     document.getElementById('login-button').style.display = 'none';
@@ -35,6 +36,7 @@ document.getElementById('logout-button').addEventListener('click', function() {
 // Check the login status when the page loads
 checkLoginStatus();
 
+
 // Handle the submit review button click
 document.getElementById('submit-review').addEventListener('click', function() {
   var title = document.getElementById('title').value;
@@ -48,7 +50,7 @@ document.getElementById('submit-review').addEventListener('click', function() {
     var reviewHeader = document.createElement('div');
     reviewHeader.classList.add('review-header');
 
-    var reviewTitle = document.createElement('h3');
+    var reviewTitle = document.createElement('h2');
     reviewTitle.textContent = title;
 
     var usernameElement = document.createElement('span');
@@ -134,3 +136,5 @@ document.getElementById('submit-review').addEventListener('click', function() {
     }, 10);
   }
 });
+
+

@@ -5,23 +5,45 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../styleHomePage.css">
+  <link rel="stylesheet" href="../Contact/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Belanosima&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+  <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  
   <title>Leave a comment</title>
 </head>
-<style>
-  body {
-    background-image: url(../images/Theme-background.jpg);
-  }
-</style>
+
 <body>
-  <div class="login-section">
-    <h2>Login</h2>
-    <div class="login-form">
-      <input type="text" id="username" placeholder="Your Name">
-      <button id="login-button">Log In</button>
-      <button id="logout-button" style="display: none;">Log Out</button>
-    </div>
-  </div>
+ 
+
+  <nav class="reviewNavBar">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/CustomHamburgerPage/index.html">Make your own</a></li>
+      <li><a href="/MenuPage/index.html">Menu</a></li>
+      <li><a href="/History/index.html">History</a></li>
+      <li><a href="/ReviewsPage/index.html">Review Page</a></li>
+      <li><a href="/Contact/index.html">Contact</a></li>
+      <!-- <li class="logo"><img src="/images/CustomHamburgerPage-Images/logo example.png" alt="Logo"></li> -->
+
+      <li>
+        <div class="login-section">
+          <div class="login-form">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login-button">Log In</button>
+            <button id="logout-button" style="display: none;">Log Out</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  
+  
 
   <div id="mainDiv">
     <div class="review-section">
@@ -32,7 +54,7 @@
       <div class="review-form">
         <div class="user-info">
           <div class="user-photo">
-            <!-- Place for user photo -->
+            <img src="../MenuPage/sliderImages/male1.png" alt="">
           </div>
           <div class="user-details">
             <p id="logged-in-username">Please Log In</p>
@@ -57,7 +79,7 @@
           <div class="review">
             <p></p>
             <div class="like-button">
-              <span class="like-counter"></span>
+              <span class="like-counter">lajk</span>
             </div>
           </div>
           <!-- Counter and button -->
@@ -89,5 +111,7 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script src="../Contact/script.js"></script>
+  
 </body>
 </html>
