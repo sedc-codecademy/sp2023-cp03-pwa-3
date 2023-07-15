@@ -25,7 +25,7 @@ let AllMenuOne = [
   let AllMenuFour = [
     {
       burgerNameFour: 'Spicy Chicken',
-      burgerPrice: 21,
+      burgerPrice: 7.90,
       customerName: 'Ilche',
       burgerImage : '<img src="../MenuPage/BurgerImages/SpicyBurger.png" alt="Spicy Burger">',
       customerImage: '<img class="male-order" src="../MenuPage/sliderImages/male4.png" alt="Male">'
@@ -57,21 +57,21 @@ let AllMenuSeven =[
   let AllMenu =[
    {
     burgerName: 'Cheese Please',
-      burgerPrice: 21,
+      burgerPrice: 8,
       customerName: 'Angela',
       burgerImage : '<img src="../MenuPage/BurgerImages/CheeseBurger.png" alt="Cheese Burger">',
       customerImage: '<img class="female-order" src="../MenuPage/sliderImages/female3.png" alt="Female">'
    },
    {
     burgerName: 'Hangover Burger',
-      burgerPrice: 21,
+      burgerPrice: 8.20,
       customerName: 'Aleksandra',
       burgerImage : '<img src="../MenuPage/BurgerImages/HangoverBurger.png" alt="Hangover Burger">',
       customerImage: '<img class="female-order" src="../MenuPage/sliderImages/female44.avif" alt="Female">'
    },
    {
       burgerName: 'Hangry Burger',
-      burgerPrice: 21,
+      burgerPrice: 9.20,
       customerName: 'Klimentina',
       burgerImage : '<img src="../MenuPage/BurgerImages/HungryBurger.png" alt="Hungry Burger">',
       customerImage: '<img class="female-order" src="../MenuPage/sliderImages/female5.jpg" alt="Female">'
