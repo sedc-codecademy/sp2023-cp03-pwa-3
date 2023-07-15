@@ -1,128 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Font Awesome  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- w3 school library -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- styles -->
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../Card/card.css" type="text/css">
+  <link rel="stylesheet" href="../Contact/style.css">
+  <!-- Tab icon -->
+  <link rel="icon" href="../images/CustomHamburgerPage-Images/logo example.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <title>Make your own Burger</title>
 </head>
+<body onload="realtimeClock()">
 
-<body>
-  <header class="CustomHeader">
-    <span class="logo" style="color: red;"><img src="../images/CustomHamburgerPage-Images/logo example.png"
-        alt="Logo"></span>
-    <h1 class="customBurgerTitle">Make your own burger</h1>
-  </header>
-  <main>
-    <!-- Whole container -->
-    <div class="main-container">
-      <!-- Left side burger maker holder -->
-      <div class="burgerMaker">
-
-        <!-- Burger Name input  -->
-        <div class="burgerNameInput">
-          <div class="group">
-            <input type="text" id="burgerName" required>
-            <label for="burgerName">Give a name to your burger</label>
-            <div class="bar"></div>
-          </div>
+  
+        <header class="CustomHeader">
+      
+          <!-- nav bar -->
+          <nav class="navbar">
+            <div class="Menue">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-links">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-links">Custom Burger</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-links">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-links">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-links">History</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-links">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-links">Rewiew</a>
+                </li>
+            </ul>
+         </nav>  
         </div>
+        <!-- <div class="blur"></div>  -->
+          <!-- logo and title -->
+            <span class="logo" style="color: red;">
+              <a href="../index.html"><img src="../images/CustomHamburgerPage-Images/logo example.png" alt="Logo"></a>
+              <h1 class="customBurgerTitle">Make your own burger</h1>
+            </span>
+           
+            <!-- Real time and date  -->
+            <div class="clock-container">
+              <div id="clock"></div>
+              <p id="status"></p>
+        </header>
+        
+        <main>
+          <!-- Whole container -->
+          <div class="main-container">
+            <!-- Left side burger maker holder -->
+            <div class="burgerMaker">
+      
+              <!-- Burger Name input-->
+              <div class="burgerNameInput">
+                <div class="group">
+                  <input type="text" id="burgerName" required>
+                  <label for="burgerName">Give a name to your burger</label>
+                  <div class="bar"></div>
+                </div>
+              </div>
+             
+      
+              <!-- Burger builder container -->
+              
+              <div class="fixed-container">
+                <div class="burger absolute-burger" id="BurgerCreating">
+                  <!-- images added from script -->
+                </div>
+              </div>
+              <img src="../images/CustomHamburgerPage-Images/Wooden-board2.png" class="Wboard" alt="Wooden-board" width="100%">
+              
+            
+              <!-- Total amount -->       
+              <span id="price"> <i class="fas fa-hand-holding-usd"></i> Price: 0.00$</span> 
+            </div>
+           
+            
+            <!-- Right side ingredients -->
+            <div class="ingredientsContainer">
+      
+           <!-- ingredients tabs -->
+            <div class="ingredientsTabs">
+              <div class="w3-row">
+                <a href="javascript:void(0)" onclick="openIngredients(event, 'Meat', 'meatTab');">
+                  <div id="meatTab" class="w3-third tablink w3-bottombar w3-hover-yellow w3-padding" style="color:#FF914D; text-align: center;">Meat</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openIngredients(event, 'Vegetables', 'vegetablesTab');">
+                  <div id="vegetablesTab" class="w3-third tablink w3-bottombar w3-hover-yellow w3-padding" style="color:#FF914D; text-align: center;">Vegetables</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openIngredients(event, 'Toppings', 'toppingsTab');">
+                  <div id="toppingsTab" class="w3-third tablink w3-bottombar w3-hover-yellow w3-padding" style="color:#FF914D; text-align: center;">Toppings</div>
+                </a>
+              </div>
+
+              <!-- Dynamically -->
+              <div id="Meat" class="w3-container ingredient"></div>
+
+              <div id="Vegetables" class="w3-container ingredient" style="display:none"></div>
+
+              <div id="Toppings" class="w3-container ingredient" style="display:none"></div>
+            </div>
 
 
-        <!-- Burger -->
-        <div class="burger">
+              <!-- Buttons -->
+              <div class="buttons">
+                <button id="deleteAll-btn" onclick="openPopupDelete()">Delete All <i class="fa fa-trash" aria-hidden="true"></i></button>
+                <button id = "addToCart-btn" onclick="openPopup()">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+      
+                <!-- Add to cart pop up -->
+                <div id="popup" class="popup">
+                  <div class="popup-content">
+                    <img src="../images/CustomHamburgerPage-Images/logo example.png" alt="">
+                    <span class="close-button" onclick="closePopup()">&times;</span>
+                    <p>Do you want to make another one ?</p>
+                    <div class="popup-buttons">
+                      <button onclick="handleYes()">Yes</button>
+                      <a href="#"><button onclick="handleNo()">No</button></a>
+                    </div>
+                  </div>
+                </div>
 
-          <img src="../images/CustomHamburgerPage-Images/Wooden-board.png" alt="Wooden-board">
-          <!-- Total amount -->
-          <span id="price">Price: 0.00$</span>
-        </div>
-
-      </div>
-
-      <!-- Right side ingredients -->
-      <div class="ingredientsContainer">
-
-        <!-- ingredients tabs -->
-        <div class="ingredientsTabs">
-          <div class="w3-row">
-            <a href="javascript:void(0)" onclick="openIngredients(event, 'Meat');">
-              <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"
-                style="color:#FF914D; text-align: center;">Meat</div>
-            </a>
-            <a href="javascript:void(0)" onclick="openIngredients(event, 'Vegetables');">
-              <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"
-                style="color:#FF914D; text-align: center;">Vegetables</div>
-            </a>
-            <a href="javascript:void(0)" onclick="openIngredients(event, 'Sauces');">
-              <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"
-                style="color:#FF914D; text-align: center;">Sauces</div>
-            </a>
-          </div>
-
-          <!-- Dinamicly -->
-          <div id="Meat" class="w3-container ingredient" style="display:none"></div>
-
-          <div id="Vegetables" class="w3-container ingredient" style="display:none"></div>
-
-          <div id="Sauces" class="w3-container ingredient" style="display:none"></div>
-        </div>
-
-
-
-        <!-- Buttons -->
-        <div class="buttons">
-          <button id="deleteAll-btn">Delete All <i class="fa fa-trash" aria-hidden="true"></i></button>
-          <button id="addToCart-btn">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-        </div>
-
-
-
-
-
-        <div class="box" id="boXX" style="display: none;">
-          <div class="questionBox">
-            <p>Do you want to make another order?</p>
-            <div>
-              <button id="btnYes" class="btn1">Yes</button>
-              <button id="btnNo" class="btn1">No</button>
+                <!-- Delete pop up-->
+                <div id="popup-Delete" class="popup-Delete">
+                  <div class="popup-content">
+                    <img src="../images/CustomHamburgerPage-Images/logo example.png" alt="">
+                    <span class="close-button" onclick="closePopupDelete()">&times;</span>
+                    <p>Are you sure you want to delete everything ? <i class="fas fa-exclamation-triangle"></i></p>
+                    <div class="popup-buttons">
+                      <button onclick="handleYesDelete()">Yes</button>
+                      <button onclick="closePopupDelete()">No</button>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+      
             </div>
           </div>
+      
+        
+        </main>
+
+
+      
+        
+      
+        
+      
+        <!-- <footer>
+          <div class="footerContainer">
+          <div class="social-footer">
+              <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                  <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                  <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                  <i class="fab fa-google-plus"></i>
+              </a>
+          </div>
+      </div>
+      <div class="footerBottom">
+          <p>Copyright &copy;2023; All right reserved to one and only <span class="designer">Lesperi SEDC</span></p>
         </div>
+      </footer> -->
+ 
+        <script src="../Contact/script.js"></script>
+        <script src="../script.js"></script>
+      </body>
+      </html>
+      
 
+      
 
-
-
-      </div>
-    </div>
-
-
-
-    <div class="scrollbar-hamburger">
-      <div class="scrollbar-line"></div>
-    </div>
-
-
-
-    <section class="CardBox" id="cardBox">
-      <h3 id="text">Your card with orders:</h3>
-      <div class="cards" id="cards">
-      </div>
-      <h4 id="total">Total:</h4>
-    </section>
-
-
-
-  </main>
-  <footer>
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo obcaecati inventore voluptatum, sunt cupiditate
-    iste neque quia iure harum fugiat fugit cum sint sed ducimus quaerat, corporis animi dolor? Neque.
-  </footer>
-  <script src="../script.js"></script>
-</body>
-
-</html>
+   
+      
