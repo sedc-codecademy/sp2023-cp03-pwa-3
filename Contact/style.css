@@ -94,6 +94,17 @@ body {
 .nav-links:hover::after{
     transform: scaleX(1);
 }
+.navbar img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+  .cart-icon {
+    font-size: 24px;
+    color: #000000;
+  }
 
 /* DO ODVE E KODOT ZA NAV BAROT */
 body,
@@ -327,7 +338,6 @@ footer{
     display: flex;
     align-items: center;
    justify-content: center;
-  
   }
   .social-footer{
     display: flex;

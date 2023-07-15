@@ -1,0 +1,70 @@
+/* CSS for the card layout */
+    .card {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1400px;
+        border: 0.6px solid #ffffff;
+        border-radius: 2px;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 10px rgba(204, 204, 204, 0.5);
+        background-color: rgb(214, 212, 212);
+    }
+
+    .user {
+    
+    border: 0.6px solid #acacac;  
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 1.3em;
+    color: #000000;
+    margin-bottom: 2px;
+    margin-top: 20px;
+    background-color: rgb(214, 212, 212);
+  }
+  .user:hover{
+    background-color: #acacac;
+  }
+  
+  .datetime {
+    
+    margin-right: auto;
+    border-radius: px ;
+    color: #000000;
+    font-size: 1em;
+
+  }
+  
+  /* CSS for the page layout */
+  body {
+    background-image: url("../images/Theme-background.jpg");
+    background-size: cover;
+    background-position: center center;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 10px;
+  }
+  .h1:hover{
+    cursor : pointer;
+    
+  }
+  h1 {
+    
+    text-align: center;
+    margin-bottom: 50px;
+    color: #FF914D;
+  }
+  h5{
+    margin-right: auto;
+    
+  }
+  p{
+    border: 0.px solid #f3ebeb;
+    border-radius: 7px;
+  }
+
+  h3{
+    margin-right: auto;
+  }
+  
+  
