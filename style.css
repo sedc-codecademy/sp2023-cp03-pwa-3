@@ -572,52 +572,39 @@ label {
 
 
 
-
 /* Rewiew  CSS 🡻 */
+
+/* General Styles */
 
 #mainDiv {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
- 
-  height: auto;
-  gap: 3rem;
-  margin: 0%;
-
+  justify-content: space-around;
 }
 
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-#ReviewSectionNavBar {
+.mainReviewDiv { 
   background-color: #1a1a1a;
-  margin-bottom: 0%;
+  width: 70%;
+  padding: 20px;
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+
 }
 
-#footerContainer {
-  width: 100%;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0%;
+.reviews-list {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #FF914D;
+  border-radius: 1rem;
+  background-image: url(ReviewsPage/reviewPage-Images/copyEdited.jpg);
+  height: 400px;
+  overflow-y: auto;
+  
 }
 
-#social-footer{
-  align-items: center;
-  justify-content: center;
-}
-
-.mainReviewDiv {
- color: #FF914D;
- max-height: 400px;
- overflow-y: auto;
- max-width: 700px;
- 
+body {
+  background-color: #1a1a1a;
+  color: #FFDE59;
+  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -654,58 +641,57 @@ label {
   text-decoration: none;
 }
 
-.login-form {
-  display: flex;
-  justify-content: space-around;
-
-}
-
 /* Review Section Styles */
 .review-section {
+  
   padding: 1rem;
   border: 1px solid #FF914D;
+  border-radius: 1rem;
   background-color: #1a1a1a;
+  width: 25%;
+  justify-content: center;
 
 }
 
+.logoDiv {
+  text-align: center;
+}
+
+.logoDiv img {
+  max-width: 100%;
+  height: 200px;
+  padding: 0%;
+  margin: 0%;
+}
 .review-section h2 {
-  color: #FFDE59;
+  color: var(--orange);
   margin-bottom: 1rem;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .review-form {
-  border: 1px solid #FFDE59;
-  padding: 10px;
-  background-color: #1a1a1a ;
-  border: 0.5px solid #FFDE59;
-  color: var(--c);
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 .user-info {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-  
+  margin-bottom: 1rem;
 }
 
-
-
-.user-photo img {
+.user-photo {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  object-fit: cover;
-  /* background-image: url('../../Desktop/dobro-jutro-dobar-dan-neka-tije-suncem-obasjan-24289589.png'); */
-  background-size: cover;
-  background-position: center;
+  background-color: #3F3F3F;
   margin-right: 10px;
 }
 
-
 .user-details input {
-  margin-bottom: 1px;
-  background-color: var(--orange);
+  margin-bottom: 5px;
+  background-color: #3F3F3F;
   height: 1.5rem;
   border: 0.1px solid #FFDE59;
   border-radius: 3px;
@@ -721,13 +707,6 @@ label {
   color: #FFDE59;
 }
 
-.counter {
-  color: var(--grey);
- background-color: var(--orange);
- border-radius: 5px;
- 
-}
-
 #submit-review {
   background-color: #FF914D;
   color: #eee;
@@ -738,142 +717,26 @@ label {
 }
 
 #submit-review:hover {
-  background: linear-gradient(90deg, #FF914D,#1a1a1a,#1a1a1a,#1a1a1a,#1a1a1a,#1a1a1a,#FF914D);
+  background: linear-gradient(90deg, #FF914D, #1a1a1a, #FF914D);
   border-radius: 0.3em;
-  color:#FFDE59;
-  
-  
-}
-
-
-@media only screen and (max-width: 867px) {
-#mainDiv {
-  justify-content: space-around;
-  display: grid;
-}
-  .review-section {
-    padding: 10px;
-    width: 80%;
-  }
-.review:first-child {
-  animation-delay: 0.1s; /* Add delay to the first review item for a staggered animation effect */
-}
-
-  .mainReviewDiv {
-    
-    width: 100%;
-  }
-  .user-info {
-    flex-direction: column;
-  }
-
-.review.hide {
-  animation: slideUp 0.4s ease forwards;
-}
-
-  .user-details input,
-  .review-content textarea {
-    width: 100%;
-  }
-
-  .rating label {
-    width: 16px;
-    height: 16px;
-  }
-
-  #submit-review {
-    width: 100%;
-    position:relative;
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-  
-.reviews-list {
-  margin-top: 20px;
-  margin-left: 20px;
-  
-
-}
-.review {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #1a1a1a;
-  border: 1px, solid , #FFDE59;
   color: #FFDE59;
-  max-width: 100%;
-  height: fit-content;
- 
 }
 
-.review .review-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  
-}
-
-.review-title {
-  margin: 0;
-  color: var(--yellow);
-  
-}
-
-.review .review-header .username {
-  margin-left: 30px;
-  color: var(--orange);
-}
-
-.review-body {
-  margin-top: 10px;
-  
-}
-
-.review-text {
-  padding-bottom: 30px;
-}
-
-.like-button {
-  display: inline-block;
-  background-color: #FF914D;
-  border: none;
-  cursor: pointer;
-  padding: 5px 10px;
-  color: #eee;
-  border-radius: 0.5rem;
-  text-align: center;
-  transition: 0.4s;
-  margin-right: 10px ;
-}
-
-.like-button:hover {
-  background-color: cornflowerblue;
+/* Reviews List Styles */
+.reviews-list {
+  margin-top: 2rem;
+  justify-content: space-around;
 }
 
 .review {
   border: 1px solid #ccc;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--grey);
+  border: 1px solid #FFDE59;
+  border-radius: 1rem;
   display: none; /* Initially hide review items */
   animation: slideDown 0.4s ease;
-}
-
-
-
-/* Animation Styles */
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .review:first-child {
@@ -888,12 +751,72 @@ label {
   animation: slideUp 0.4s ease forwards;
 }
 
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-title {
+  margin: 0;
+}
+
+.username {
+  font-size: 14px;
+  color: #666;
+}
+
+.review-body {
+  margin-top: 10px;
+  color: var(--orange);
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 1%;
+  max-height: 100%;
+}
+
+.review-text {
+  margin: 0;
+}
+
+.like-button {
+  display: inline-block;
+  background-color: #FF914D;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: #eee;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.like-button:hover {
+  background-color: cornflowerblue;
+}
+
+.like-counter {
+  margin-left: 1rem;
+  color: #FFDE59;
+}
+
+/* Animation Styles */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes slideUp {
   0% {
     opacity: 1;
     transform: translateY(0);
   }
-
   100% {
     opacity: 0;
     transform: translateY(-10px);
@@ -927,43 +850,19 @@ label {
   .like-counter {
     margin-left: 0;
     margin-top: 0.5rem;
-    
   }
 
-.like-button , .delete-button {
-  display: inline-block;
-  margin-top: 1rem; 
-  background-color: var(--orange);
-  border: none;
-  cursor: pointer;
-  width: 3rem;
-  height: 1.4rem;
-  color: var(--grey);
-  /* border-radius: 0.5rem; */
-  text-align: center;
-  
+  #submit-review {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-.delete-button:hover {
-  background-color:#ff2727;
-  color: #eee;
-}
-.like-button:hover {
-  background-color: cornflowerblue;  
-  color: #eee;
-}
-}
-.delete-button {
-  background-color: #ff2727; 
-  width: 5rem;
-  height: 2rem;
-  color: #eee;
-  border-radius: 0.5rem;
-  margin-top: 1rem; 
-}
-
 
 /* End of rewiew burger CSS 🡹  */
-
 
 
 
