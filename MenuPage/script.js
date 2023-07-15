@@ -3,7 +3,7 @@ let AllMenuOne = [
       burgerNameOne: 'Crispy Chicken',
       burgerPrice: 5.5 ,
       customerName: 'Marko',
-      burgerImage : '<img src="./staticMenuImages/hamburger1.jpeg" alt"Hamburger">',
+      burgerImage : '<img src="../MenuPage/BurgerImages/CrispyChicken2.png" alt="CrispyChicken">',
       customerImage: '<img class="male-order" src="../MenuPage/sliderImages/male1.png" alt="Male">'
     }];
   let AllMenuTwo = [
@@ -11,7 +11,7 @@ let AllMenuOne = [
     burgerNameTwo: 'Beef Burger',
     burgerPrice: 9,
     customerName: 'Nikola',
-    burgerImage : '<img src="./staticMenuImages/hamburger1.jpeg" alt"Hamburger">',
+    burgerImage : '<img src="../MenuPage/BurgerImages/BeefBurger.png" alt="Beef Burger">',
     customerImage: '<img class="male-order" src="../MenuPage/sliderImages/male2.png" alt="Male">'
   }];
   let AllMenuThree =[
@@ -19,7 +19,7 @@ let AllMenuOne = [
     burgerNameThree: 'Bacon Burger',
       burgerPrice: 10,
       customerName: 'Nikolce',
-      burgerImage : '<img src="./staticMenuImages/hamburger1.jpeg" alt"Hamburger">',
+      burgerImage : '<img src="../MenuPage/BurgerImages/BaconBurger.png" alt="Bacon Burger">',
       customerImage: '<img class="male-order" src="../MenuPage/sliderImages/male3.png" alt="Male">'
    }];
   let AllMenuFour = [
@@ -27,7 +27,7 @@ let AllMenuOne = [
       burgerNameFour: 'Spicy Chicken',
       burgerPrice: 21,
       customerName: 'Ilche',
-      burgerImage : '<img src="./staticMenuImages/hamburger1.jpeg" alt"Hamburger">',
+      burgerImage : '<img src="../MenuPage/BurgerImages/SpicyBurger.png" alt="Spicy Burger">',
       customerImage: '<img class="male-order" src="../MenuPage/sliderImages/male4.png" alt="Male">'
    }];
   let AllMenuFive = [
@@ -35,7 +35,7 @@ let AllMenuOne = [
       burgerNameFive: 'Delicious Burger',
       burgerPrice: 5.50,
       customerName: 'Kosta',
-      burgerImage : '<img src="./staticMenuImages/hamburger1.jpeg" alt"Hamburger">',
+      burgerImage : '<img src="../MenuPage/BurgerImages/DeliciousBurger3.png" alt="Delicious Burger">',
       customerImage: '<img class="male-order" src="../MenuPage/sliderImages/male5.jpg" alt="Male">'
   }];
 let AllMenuSix =[
@@ -43,7 +43,7 @@ let AllMenuSix =[
     burgerNameSix: 'Tasty Burger',
     burgerPrice: 9,
     customerName: 'Biljana',
-    burgerImage : '<img src="./staticMenuImages/hamburger1.jpeg" alt"Hamburger">',
+    burgerImage : '<img src="../MenuPage/BurgerImages/TastyBurger.png" alt="Tasty Burger">',
     customerImage: '<img class="female-order" src="../MenuPage/sliderImages/female1.png" alt="Female">'
   }];
 let AllMenuSeven =[
@@ -51,7 +51,7 @@ let AllMenuSeven =[
       burgerNameSeven: 'Bigfoot Burger',
       burgerPrice: 10,
       customerName: 'Martina',
-      burgerImage : '<img src="./staticMenuImages/hamburger1.jpeg" alt"Hamburger">',
+      burgerImage : '<img src="../MenuPage/BurgerImages/BigfootBurger2.png" alt="Bigfoot Burger">',
       customerImage: '<img class="female-order" src="../MenuPage/sliderImages/female2.png" alt="Female">'
    }];
   let AllMenu =[
@@ -59,21 +59,21 @@ let AllMenuSeven =[
     burgerName: 'Cheese Please',
       burgerPrice: 21,
       customerName: 'Angela',
-      burgerImage : '<img src="./staticMenuImages/hamburger1.jpeg" alt"Hamburger">',
+      burgerImage : '<img src="../MenuPage/BurgerImages/CheeseBurger.png" alt="Cheese Burger">',
       customerImage: '<img class="female-order" src="../MenuPage/sliderImages/female3.png" alt="Female">'
    },
    {
     burgerName: 'Hangover Burger',
       burgerPrice: 21,
       customerName: 'Aleksandra',
-      burgerImage : '<img src="./staticMenuImages/hamburger1.jpeg" alt"Hamburger">',
+      burgerImage : '<img src="../MenuPage/BurgerImages/HangoverBurger.png" alt="Hangover Burger">',
       customerImage: '<img class="female-order" src="../MenuPage/sliderImages/female44.avif" alt="Female">'
    },
    {
       burgerName: 'Hangry Burger',
       burgerPrice: 21,
       customerName: 'Klimentina',
-      burgerImage : '<img src="./staticMenuImages/hamburger1.jpeg" alt"Hamburger">',
+      burgerImage : '<img src="../MenuPage/BurgerImages/HungryBurger.png" alt="Hungry Burger">',
       customerImage: '<img class="female-order" src="../MenuPage/sliderImages/female5.jpg" alt="Female">'
    }];
   
