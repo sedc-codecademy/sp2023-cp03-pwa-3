@@ -5,36 +5,59 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../Contact/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Belanosima&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+  <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  
   <title>Leave a comment</title>
 </head>
-<style>
-  body {
-    /* background-image: url(../images/Theme-background.jpg); */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/Theme-background.jpg);
-    background-blend-mode: multiply;
-    backdrop-filter: blur(2px);
-  }
-</style>
+
 <body>
-  <div class="login-section">
-    <h2>Login</h2>
-    <div class="login-form">
-      <input type="text" id="username" placeholder="Your Name">
-      <button id="login-button">Log In</button>
-      <button id="logout-button" style="display: none;">Log Out</button>
-    </div>
-  </div>
+ 
+
+  <nav class="reviewNavBar">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/CustomHamburgerPage/index.html">Make your own</a></li>
+      <li><a href="/MenuPage/index.html">Menu</a></li>
+      <li><a href="/History/index.html">History</a></li>
+      <li><a href="/ReviewsPage/index.html">Review Page</a></li>
+      <li><a href="/Contact/index.html">Contact</a></li>
+      <!-- <li class="logo"><img src="/images/CustomHamburgerPage-Images/logo example.png" alt="Logo"></li> -->
+
+      <li>
+        <div class="login-section">
+          <div class="login-form">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login-button">Log In</button>
+            <button id="logout-button" style="display: none;">Log Out</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  
+  
 
   <div id="mainDiv">
     <div class="review-section">
-      <h2>Leave a Review</h2>
+      <h2>Share Your Experience</h2>
+      <div class="logoDiv">
+        <img src="/images/CustomHamburgerPage-Images/logo example.png" alt="Logo">
+      </div>
       <div class="review-form">
         <div class="user-info">
           <div class="user-photo">
-            <img src="../images/Screenshot 2023-07-06 121848.png" alt="User Photo">
+            <img src="../MenuPage/sliderImages/male1.png" alt="">
           </div>
           <div class="user-details">
-            <p id="logged-in-username">Ovde UserName</p>
+            <p id="logged-in-username">Please Log In</p>
             <input type="text" id="title" placeholder="Review Title">
           </div>
         </div>
@@ -43,28 +66,52 @@
         </div>
         <button id="submit-review">Submit</button>
       </div>
+      
+      
     </div>
 
     <div class="mainReviewDiv">
       <h2 class="allReviewsHeader">All Reviews: </h2>
       <div class="reviews-container">
         <div class="reviews-list">
+          
           <!-- Existing reviews list content -->
           <div class="review">
-            <p>Review content goes here</p>
+            <p></p>
             <div class="like-button">
-              Like
-              <span class="like-counter">0</span>
+              <span class="like-counter">lajk</span>
             </div>
           </div>
           <!-- Counter and button -->
         </div>
-        
         <!-- Review items will be dynamically added here -->
       </div>
     </div>
   </div>
 
+  <footer>
+    <div class="footerContainer">
+      <div class="social-footer">
+        <a href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-google-plus"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footerBottom">
+      <p>Copyright &copy;2023; All right reserved to one and only <span class="designer">Lesperi SEDC</span></p>
+    </div>
+  </footer>
   <script src="script.js"></script>
+  <script src="../Contact/script.js"></script>
+  
 </body>
 </html>

@@ -699,8 +699,6 @@ width: 100%;
 
 
 
-
-
 /* End of custom burger CSS 🡹  */
 
 
@@ -830,85 +828,131 @@ width: 100%;
 
 
 
-
 /* Rewiew  CSS 🡻 */
+
+/* General Styles */
 
 #mainDiv {
   display: flex;
-  justify-content: space-between; 
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: 1rem;
-}
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  justify-content: space-around;
+  margin-top: 6rem;
 }
 
-.mainReviewDiv {
-  
-  margin-bottom: 20px;
-  background-color: var(--orange);
-  color: #1a1a1a;
-  font-family: Arial, sans-serif;
+a {
+  font-family: 'Belanosima', sans-serif;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
+.mainReviewDiv { 
+  background-color: #1a1a1a;
+  width: 70%;
+  padding: 20px;
+  border: 1px solid var(--orange);
+  border-radius: 10px;
+  font-family: 'Belanosima', sans-serif;
 }
 
-/* Header Styles */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #FF914D;
-}
-
-.navigation {
-  list-style: none;
-  display: flex;
-}
-
-.navigation li {
-  margin-right: 1rem;
-}
-
-.navigation li a {
-  color: #FFDE59;
-  text-decoration: none;
-}
-
-/* Review Section Styles */
-.review-section {
+.reviews-list {
   margin-bottom: 2rem;
   padding: 1rem;
   border: 1px solid #FF914D;
   border-radius: 1rem;
-  background-color: #1a1a1a;
+  background-image: url(ReviewsPage/reviewPage-Images/copyEdited.jpg);
+  height: 400px;
+  overflow-y: auto;
+  font-family: 'Belanosima', sans-serif;
+  
 }
 
-.review-section h2 {
+body {
+  background-color: #1a1a1a;
   color: #FFDE59;
+  font-family: Arial, sans-serif;
+}
+
+.reviewNavBar {
+  padding: 0px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 3rem;
+  background-color: #1a1a1a;
+  border-bottom:5px solid  #FF914D;
+  
+
+}
+
+.reviewNavBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.reviewNavBar li {
+  margin-right: 10px;
+}
+
+.reviewNavBar a {
+  color: var(--orange);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.reviewNavBar a:hover {
+  background-color: var(--yellow);
+  color: var(--grey);
+}
+
+.reviewNavBar .logo {
+width: fit-content;
+height: auto;
+}
+
+.reviewNavBar .logo img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+
+/* Review Section Styles */
+.review-section {
+  font-family: 'Belanosima', sans-serif;
+  padding: 1rem;
+  border: 1px solid #FF914D;
+  border-radius: 1rem;
+  background-color: #1a1a1a;
+  width: 25%;
+  justify-content: center;
+}
+
+.logoDiv {
+  text-align: center;
+  background-image: url(ReviewsPage/reviewPage-Images/copyEdited.jpg);
+  border: 1px solid var(--orange);
+}
+
+.logoDiv img {
+  max-width: 100%;
+  height: 200px;
+  padding: 0%;
+  margin: 0%;
+}
+.review-section h2 {
+  color: var(--yellow);
   margin-bottom: 1rem;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .review-form {
-  border: 1px solid #FFDE59;
-  padding: 10px;
-  background-color: #1a1a1a ;
-  border: 0.5px solid #FFDE59;
-  color: var(--c);
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -918,29 +962,68 @@ width: 100%;
   margin-bottom: 1rem;
 }
 
-
-
-.user-photo img {
+.user-photo {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  object-fit: cover;
-  /* background-image: url('../../Desktop/dobro-jutro-dobar-dan-neka-tije-suncem-obasjan-24289589.png'); */
-  background-size: cover;
-  background-position: center;
+  background-color: #3F3F3F;
   margin-right: 10px;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+.user-photo img {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
-
 .user-details input {
-  margin-bottom: 1px;
-  background-color: var(--orange);
+  margin-bottom: 5px;
+  background-color: #3F3F3F;
   height: 1.5rem;
   border: 0.1px solid #FFDE59;
   border-radius: 3px;
   color: #FFDE59;
 }
 
+#logged-in-username {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.login-form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.login-form #username {
+  background-color: var(--grey);
+  color: var(--c);
+  height: 2rem;
+}
+
+.login-form #password {
+  background-color: var(--grey);
+  color: var(--c);
+  height: 2rem;
+}
+
+.login-form #login-button {
+  background-color: var(--grey);
+  color: var(--yellow);
+  width: 5rem;
+  border-radius: 5px;
+
+}
+.login-form #login-button:hover {
+  background-color: var(--yellow);
+  color: #1a1a1a;
+  width: 5rem;
+  transition: 0.4s;
+  
+
+}
 .review-content textarea {
   width: 100%;
   height: 100px;
@@ -948,13 +1031,6 @@ width: 100%;
   margin-bottom: 2rem;
   background-color: #3F3F3F;
   color: #FFDE59;
-}
-
-.counter {
-  color: var(--grey);
- background-color: var(--orange);
- border-radius: 5px;
- 
 }
 
 #submit-review {
@@ -967,148 +1043,82 @@ width: 100%;
 }
 
 #submit-review:hover {
-  background: linear-gradient(90deg, #FF914D, #1a1a1a, #FF914D);
+  background-color: var(--grey);
   border-radius: 0.3em;
-  color: #FFDE59;
+  color:#FFDE59;
 }
 
-
-
-
-
-*{
-    margin: 0;
-    padding: 0;
-}
-.rate {
-    float: left;
-    height: 46px;
-    padding: 0 10px;
-}
-.rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-}
-.rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
-}
-.rate:not(:checked) > label:before {
-    content: '★ ';
-}
-.rate > input:checked ~ label {
-    color: #FFDE59  ;    
-}
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-    color: gold;  
-}
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
-    color: #FFDE59  ;
-}
-
-
-
-@media only screen and (max-width: 867px) {
-#mainDiv {
+/* Reviews List Styles */
+.reviews-list {
+  margin-top: 2rem;
   justify-content: space-around;
-  display: grid;
 }
-  .review-section {
-    padding: 10px;
-    width: 80%;
-  }
+
+.review {
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--grey);
+  border: 1px solid #FFDE59;
+  border-radius: 1rem;
+  display: none; /* Initially hide review items */
+  animation: slideDown 0.4s ease;
+}
+
 .review:first-child {
   animation-delay: 0.1s; /* Add delay to the first review item for a staggered animation effect */
 }
 
-  .mainReviewDiv {
-    padding: 20px;
-    width: 90%;
-  }
-  .user-info {
-    flex-direction: column;
-  }
+.review.show {
+  display: block; /* Show review items after animation */
+}
 
 .review.hide {
   animation: slideUp 0.4s ease forwards;
 }
 
-  .user-details input,
-  .review-content textarea {
-    width: 100%;
-  }
-
-  .rating label {
-    width: 16px;
-    height: 16px;
-  }
-
-  #submit-review {
-    width: 100%;
-    position:relative;
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-  
-
-
-
-.reviews-list {
-  margin-top: 20px;
-  margin-left: 20px;
-  
-
-}
-
-.review {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #1a1a1a;
-  border: 1px, solid , #FFDE59;
-  color: #FFDE59;
-}
-
-.review .review-header {
+.review-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  height: 3rem;
   
 }
 
 .review-title {
   margin: 0;
+  
+  
 }
 
-.review .review-header .username {
-  margin-left: 30px;
-  color: var(--orange);
+.username {
+  font-size:medium;
+  color: #666;
 }
 
 .review-body {
   margin-top: 10px;
-  
+  color: var(--orange);
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 1%;
+  max-height: 100%;
 }
 
 .review-text {
-  padding-bottom: 30px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--c);
+}
+
+#review {
+  
+  margin-bottom: 1rem;
 }
 
 .like-button {
-  display: inline-block;
+  position: relative;
+  
   background-color: #FF914D;
   border: none;
   cursor: pointer;
@@ -1117,18 +1127,101 @@ width: 100%;
   border-radius: 0.5rem;
   text-align: center;
   transition: 0.4s;
-  margin-right: 10px ;
+}
+.delete-button {
+position: relative; 
+
+margin-top: 0%;
+}
+
+
+.like-button-container { 
+  display: flex;
+}
+
+.counter {
+margin-left: 0.5rem;
+background-color: var(--grey); 
+border:1px solid #FF914D;
+width: 20px;
+height: 28px;
+border-radius: 5px;
+text-align: center;
+padding: 2px;
+
 }
 
 .like-button:hover {
   background-color: cornflowerblue;
 }
 
-.like-counter {
-  margin-left: 1rem;
-  color: #FFDE59;
+li {
+  margin-right: 10px;
 }
 
+
+
+footer {
+  background-color: #3F3F3F;
+  position: sticky;
+  top: 100%;
+  clear: both;
+  width: 100%;
+}
+
+.footerContainer {
+  width: 100%;
+  height: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-footer {
+  display: flex;
+  margin-top: 0.3rem
+}
+
+.social-footer a {
+  width: 45px;
+  height: 45px;
+  border-radius: 20px;
+  background: #FF914D;
+  color: #3F3F3F;
+  text-align: center;
+  line-height: 45px;
+  transition: .3s;
+  margin: 0.95rem;
+}
+
+.footerBottom {
+  background-color: #1a1a1a;
+  height: 35px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: #FF914D;
+}
+
+.social-footer a:hover {
+  transform: scale(1.05);
+}
+
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logo img {
+  width: 70px; 
+  height: 70px; 
+  margin-right: 10px;
+}
 
 
 /* Animation Styles */
@@ -1181,23 +1274,32 @@ width: 100%;
   .like-counter {
     margin-left: 0;
     margin-top: 0.5rem;
-    
   }
 
-  #submit-review {
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.like-button , .delete-button {
+  display: inline-block;
+ 
+  margin-top: 1rem; 
+  
+  background-color: var(--orange);
+  border: none;
+  cursor: pointer;
+  width: 3rem;
+  height: 1.4rem;
+  color: var(--grey);
+  /* border-radius: 0.5rem; */
+  text-align: center;
+  
+}
+.delete-button:hover {
+  background-color:#ff2727;
+  color: #eee;
 }
 .like-button:hover {
   background-color: cornflowerblue;  
   color: #eee;
 }
-
+}
 .delete-button {
   background-color: #ff2727; 
   width: 5rem;
@@ -1209,7 +1311,6 @@ width: 100%;
 
 
 /* End of rewiew burger CSS 🡹  */
-
 
 
 
