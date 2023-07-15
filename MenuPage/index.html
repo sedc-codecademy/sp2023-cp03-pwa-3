@@ -9,84 +9,91 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../Contact/style.css">
 </head>
-<style>
-    body {
-      background-image: url(../images/Theme-background.jpg);
-      }
-    </style>
 <body>
-<section class="menus-area">
-<div class="container">
-  <div class="section-title">
-    <h5>Food Menu</h5>
-    <p>Best food in town</p>
-  </div>
-  <div class="menus">
-    <div class="menu-items">
-      <div class="title">Own maded burger</div>
-      <div class="single-menu">
-        <span>10$</span>
-        <img src="./staticMenuImages/hamburger1.jpeg" alt="Hamburger">
-        <h4>Beef Burger</h4>
-        <p>Hamburger with beef , tomato sauce , fries</p>
-        <img class="female-order" src="../MenuPage/sliderImages/female1.png" alt="Female"><br>
-        <a href="">Order Now</a>
-      </div>
-      <div class="title">Hamburger</div>
-      <div class="single-menu">
-        <span>10$</span>
-        <img src="./staticMenuImages/hamburger1.jpeg" alt="Hamburger">
-        <h4>Crispy Chicken</h4>
-        <p>Crispy Chicken with fries , and all sauces</p>
-        <img class="male-order" src="../MenuPage/sliderImages/male1.png" alt="Male"><br>
-        <a href="">Order Now</a>
-      </div>
+
+  <header class="MenuHeader">
+      
+    <div class="section-title">
+      <img src="../images/CustomHamburgerPage-Images/logo example.png" width="200px" alt="Logo">
+      <h5>Food Menu</h5> 
     </div>
-    <div class="menu-items">
-      <div class="title">Hamburger</div>
-      <div class="single-menu">
-        <span>10$</span>
-        <img src="./staticMenuImages/hamburger1.jpeg" alt="Hamburger">
-        <h4>Food title</h4>
-        <p>Some text</p>
-        <img class="male-order" src="../MenuPage/sliderImages/male2.png" alt="Male"><br>
-        <a href="">Order Now</a>
-      </div>
-      <div class="title">Hamburger</div>
-      <div class="single-menu">
-        <span>10$</span>
-        <img src="./staticMenuImages/hamburger1.jpeg" alt="Hamburger">
-        <h4>Food title</h4>
-        <p>Some text</p>
-        <img class="female-order" src="../MenuPage/sliderImages/female2.png" alt="Female"><br>
-        <a href="">Order Now</a>
-      </div>
+    <p>Here you can order created burgers from our customers.We hope you will enjoy our food.</p>
+  </header>
+
+  <nav class="navbar">
+    <div class="Menue">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
     </div>
-    <div class="menu-items">
-      <div class="title">Hamburger</div>
-      <div class="single-menu">
-        <span>10$</span>
-        <img src="./staticMenuImages/hamburger1.jpeg" alt="Hamburger">
-        <h4>Food title</h4>
-        <p>Some text</p>
-        <img class="male-order" src="../MenuPage/sliderImages/male3.png" alt="Male"><br>
-        <a href="">Order Now</a>
-      </div>
-      <div class="title">Hamburger</div>
-      <div class="single-menu">
-        <span>10$</span>
-        <img src="./staticMenuImages/hamburger1.jpeg" alt="Hamburger">
-        <h4>Food title</h4>
-        <p>Some text</p>
-        <img class="female-order" src="../MenuPage/sliderImages/female3.png" alt="Female"><br>
-        <a href="">Order Now</a>
-      </div>
-    </div>
-  </div>
+    <ul class="nav-list">
+        <li class="nav-item">
+            <a href="#" class="nav-links">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-links">Custom Burger</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-links">About Us</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-links">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-links">History</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-links">Cart</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-links">Rewiew</a>
+        </li>
+    </ul>
+ </nav>
+
+
+
+
+
+
+ 
+<section class="foodMenus-area">
+  <div class="foodMenu-container">
+
+      <div id="DinamicTest" class="single-menu">
+        <!-- Dinamically generated content -->
+      </div>  
+
 </div>
 </section>
 
-      <script src="script.js"></script>    
+
+
+<footer>
+  <div class="footerContainer">
+  <div class="social-footer">
+      <a href="#">
+          <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#">
+          <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#">
+          <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#">
+          <i class="fab fa-google-plus"></i>
+      </a>
+  </div>
+</div>
+<div class="footerBottom">
+  <p>Copyright &copy;2023; All right reserved to one and only <span class="designer">Lesperi SEDC</span></p>
+</div>
+</footer>
+
+<script src="../MenuPage/script.js"></script>
+      <script src="../Contact/script.js"></script>    
 </body>
 </html>

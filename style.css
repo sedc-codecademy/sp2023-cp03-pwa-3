@@ -1317,62 +1317,90 @@ footer {
 
 /* Menu CSS 🡻 */
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-.single-menu span{
-  font-family:'Poppins', sans-serif ;
+.single-menu span {
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   color: #3F3F3F;
 }
 
-.container{
-  width: 1200px;
+.foodMenu-Container {
   margin: 0 auto;
 }
 
-.menus-area{
-  background-size: cover;
-  background-position: center;
+.foodMenus-area {
   position: relative;
   z-index: 2;
   padding: 100px 0;
   color: #fff;
-
 }
 
-.menus-area::before{
+#DinamicTest{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow:row wrap;
+  flex-wrap: wrap;
+  padding-left: 110px;
+}
+.menus-area::before {
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
-  background-color: #333;
   z-index: -1;
   opacity: .95;
   left: 0;
   top: 0;
 }
-.section-title{
-  text-align: center;
-  margin-bottom: 60px;
+
+.MenuHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.section-title h5{
+
+.MenuHeader p {
+color: var(--yellow);
+font-size: larger;
+position: relative;
+bottom: 80px;
+}
+
+.section-title {
+  margin-bottom: 60px;
+  color: white;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+
+.section-title h5 {
   font-size: 34px;
   text-transform: uppercase;
   line-height: 50px;
+  color: var(--yellow);
 }
-.menus{
-  display:flex;
+
+.menus {
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  
 }
-.menu-items{
-  flex-basis: 32%;
+
+.menu-items {
+  flex-basis: 33%;
+  
 }
-.title{
+
+.title {
   background-color: #FF914D;
   text-align: center;
   padding: 10px 0;
@@ -1380,89 +1408,103 @@ footer {
   text-transform: capitalize;
   margin-bottom: 30px;
 }
-.single-menu{
-  background-color: #333;
+
+.single-menu {
   border: 1px solid;
   padding: 25px;
   text-align: center;
   position: relative;
   transition: .3s;
   margin-bottom: 30px;
+  background-color: transparent;
+  gap: 20px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.single-menu span{
+.textMenu-food{
+  padding-top: 20px;
+  margin-bottom: 15px;
+  color: wheat;
+  text-transform: capitalize;
+}
+
+.single-menu span {
   position: absolute;
   right: 0;
   bottom: 0;
   background-color: #FFDE59;
-  padding: 8px 20px;
+  padding: 8px;
   font-size: 20px;
   font-weight: 700;
   border-radius: 15px 0 0 0;
 }
-.single-menu img{
+
+.single-menu img {
   max-width: 200px;
   border: 1px solid;
   padding: 3px;
   transition: .3s;
 }
-.single-menu h4{
+
+.single-menu h4 {
   border-bottom: 1px dashed;
   margin: 10px 0;
   padding-bottom: 10px;
   text-transform: capitalize;
   font-size: 24px;
 }
-.single-menu a{
+
+.single-menu a {
   display: inline-block;
   color: #FFDE59;
   text-transform: uppercase;
   margin-top: 25px;
 }
-.single-menu:hover img{
+
+.single-menu:hover img {
   border-radius: 50%;
 }
-.single-menu:hover{
+
+.single-menu:hover {
   border-color: #FFDE59;
   border-radius: 7px;
 }
 
 .female-order{
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 justify-content: center;
 }
 .male-order{
-  width: 100px;
-  height: 100px;
-justify-content: center;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+.maleFood-Image{
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
-
-.female-order{
-  width: 100px;
-  height: 100px;
-justify-content: center;
-}
-.male-order{
-  width: 100px;
-  height: 100px;
-justify-content: center;
-}
-
-
-@media only screen and (max-width: 767px){
-  .container{
+@media only screen and (max-width: 767px) {
+  .foodMenu-Container {
     width: 350px;
   }
-  .section-title h5{
+
+  .section-title h5 {
     font-size: 34px;
     line-height: 50px;
   }
-  .menu-items{
+
+  .menu-items {
     flex-basis: 100%;
     margin-bottom: 30px;
   }
 }
+
+/* End of menu CSS 🡹  */
 
 /* End of menu CSS 🡹  */
 
