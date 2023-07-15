@@ -185,6 +185,7 @@ nav {
 
 
 
+
 /* Custom burger CSS 🡻 */
 
 .CustomHeader {
@@ -614,6 +615,7 @@ width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: var(--yellow) !important;
 }
 
 .popup-content img {
@@ -652,6 +654,7 @@ top: 20px;
 
 #clock {
   margin-right: 3px;
+  color: var(--yellow) !important;
 }
 
 #status {
@@ -699,6 +702,8 @@ width: 100%;
 
 
 /* End of custom burger CSS 🡹  */
+
+
 
 
 
@@ -786,10 +791,6 @@ width: 100%;
   display: none;
 }
 
-h3, h4, p {
-  font-size: 20px;
-  margin: 0;
-}
 
 .mainDiv {
   background-color: rgb(37, 37, 37);
